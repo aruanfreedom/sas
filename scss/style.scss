@@ -1,0 +1,134 @@
+@import "susy";
+
+// Colors
+
+$white: #fff;
+$black-opacity-9: rgba(0,0,0, .9);
+
+// Settings Sussy library
+
+$susy: (
+  columns: 12,
+  gutters: 1/1,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+   debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+);
+
+$shorthand: 12 1/4 fluid float inside;
+
+body {
+    position: relative;
+}
+
+#home{
+    background:  url("../img/main-bg.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.home-bg {
+    background: $black-opacity-9;
+    height: 100%;
+}
+
+#home-content{
+    @include span(12);
+}
+
+.center {
+    float: none;
+    margin: 0 auto;
+}
+
+.col-big-1 {
+    @include span(1);
+}
+
+.col-big-2 {
+    @include span(2);
+}
+
+.col-big-3 {
+    @include span(3);
+}
+
+.col-big-4 {
+    @include span(4);
+}
+
+.col-big-5 {
+    @include span(5);
+}
+
+.col-big-6 {
+    @include span(6);
+}
+
+.col-big-7 {
+    @include span(7);
+}
+
+.col-big-8 {
+    @include span(8);
+}
+
+.col-big-9 {
+    @include span(9);
+}
+
+.col-big-10 {
+    @include span(10);
+}
+
+.col-big-11 {
+    @include span(11);
+}
+
+.col-big-12 {
+    @include span(12);
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#top-contact {
+    color: $white;
+    span {
+        display: block;
+        padding-left: 8px;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+nav {
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
