@@ -21,8 +21,6 @@ $susy: (
   ),
 );
 
-$shorthand: 12 1/4 fluid float inside;
-
 body {
     position: relative;
 }
@@ -46,53 +44,14 @@ body {
     margin: 0 auto;
 }
 
-.col-big-1 {
-    @include span(1);
-}
+$class-slug: col-big !default;
+$grid-columns: 12;
 
-.col-big-2 {
-    @include span(2);
-}
-
-.col-big-3 {
-    @include span(3);
-}
-
-.col-big-4 {
-    @include span(4);
-}
-
-.col-big-5 {
-    @include span(5);
-}
-
-.col-big-6 {
-    @include span(6);
-}
-
-.col-big-7 {
-    @include span(7);
-}
-
-.col-big-8 {
-    @include span(8);
-}
-
-.col-big-9 {
-    @include span(9);
-}
-
-.col-big-10 {
-    @include span(10);
-}
-
-.col-big-11 {
-    @include span(11);
-}
-
-.col-big-12 {
-    @include span(12);
-}
+@for $i from 1 through $grid-columns {
+  .#{$class-slug}-#{$i} { 
+      @include span($i);
+    }
+} 
 
 .right {
     float: right;
