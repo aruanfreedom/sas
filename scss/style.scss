@@ -1,12 +1,25 @@
 @import "susy";
 
 // Colors
-
 $white: #fff;
+$black: #000;
+$yellow: #fff300;
+$grey: #5b5b5b;
+$dark-grey: #373839;
 $black-opacity-9: rgba(0,0,0, .9);
 
-// Settings Sussy library
+// Fonts
+$light-font: "SFUIDisplay-Light";
+$medium-font: "SFUIDisplay-Medium";
+$regular-font: "SFUIDisplay-Regular";
+$thin-font: "SFUIDisplay-Thin";
+$semibold-font: "SFUIDisplay-Semibold";
 
+// display width
+$medium-width: 961px 1366px ;
+$small-width: 0 960px;
+
+// Settings Sussy library
 $susy: (
   columns: 12,
   gutters: 1/1,
@@ -21,13 +34,55 @@ $susy: (
   ),
 );
 
+// Custom Grid
+$class-big: col-big !default;
+$class-sml: col-sml !default;
+$class-xs: col-xs !default;
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+  .#{$class-big}-#{$i} { 
+      @include span($i);
+  }
+  @include susy-breakpoint($medium-width) { 
+    .#{$class-sml}-#{$i} { 
+        @include span($i);
+    } 
+  }
+  @include susy-breakpoint($small-width) { 
+    .#{$class-xs}-#{$i} { 
+        @include span($i);
+    }
+  }
+} 
+
 body {
     position: relative;
+    font-family: $regular-font;
+}
+
+#main {
+    min-width: 360px;
 }
 
 #home{
     background:  url("../img/main-bg.jpg") no-repeat top center;
     background-size: cover;
+}
+
+#logo {
+    padding-top: 90px;
+    h1 {
+        color: $yellow;
+        font-weight: normal;
+        font-size: 1em;
+        margin: 35px auto 0 auto;
+        width: 150px;
+        a {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
 }
 
 .home-bg {
@@ -43,15 +98,6 @@ body {
     float: none;
     margin: 0 auto;
 }
-
-$class-slug: col-big !default;
-$grid-columns: 12;
-
-@for $i from 1 through $grid-columns {
-  .#{$class-slug}-#{$i} { 
-      @include span($i);
-    }
-} 
 
 .right {
     float: right;
@@ -73,21 +119,42 @@ $grid-columns: 12;
     text-align: center;
 }
 
-#top-contact {
-    color: $white;
-    span {
-        display: block;
-        padding-left: 8px;
-    }
-    a {
-        color: $white;
-        text-decoration: none;
-    }
+.white-font {
+    color: $white !important;
 }
 
 nav {
+    padding-top: 45px;
     a {
-        color: $white;
+        color: $grey;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-family: $thin-font;
+        padding: 0 9px;
+        
+        &.active {
+            color: $white;
+        }
+    }
+}
+
+#top-contact {
+    color: $grey;
+    padding-top: 45px;
+    #left {
+        font-family: $light-font;
+    }
+    #right {
+        font-family: $medium-font;
+    }
+    span {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 5px;
+    }
+    a {
+        color: $grey;
+        font-size: 0.9em;
         text-decoration: none;
     }
 }
