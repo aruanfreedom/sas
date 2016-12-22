@@ -404,6 +404,9 @@ body {
 .white-font {
   color: #fff !important; }
 
+.yellow-font {
+  color: #fff300 !important; }
+
 nav {
   padding-top: 45px; }
   nav a {
@@ -430,3 +433,14 @@ nav {
     color: #5b5b5b;
     font-size: 0.9em;
     text-decoration: none; }
+
+#play-icon {
+  color: #fff;
+  font-size: 3em; }
+
+#scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%; }
+  #scroll-down small {
+    color: #fff; }

@@ -123,6 +123,10 @@ body {
     color: $white !important;
 }
 
+.yellow-font {
+   color: $yellow !important; 
+}
+
 nav {
     padding-top: 45px;
     a {
@@ -156,5 +160,20 @@ nav {
         color: $grey;
         font-size: 0.9em;
         text-decoration: none;
+    }
+}
+
+#play-icon {
+    color: $white;
+    font-size: 3em;
+}
+
+#scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    small {
+        color: $white;
     }
 }
