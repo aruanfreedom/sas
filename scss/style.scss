@@ -16,8 +16,8 @@ $thin-font: "SFUIDisplay-Thin";
 $semibold-font: "SFUIDisplay-Semibold";
 
 // display width
-$medium-width: 961px 1366px ;
-$small-width: 0 960px;
+$medium-width: 961px 1366px;
+$small-width: 360px 960px;
 
 // Settings Sussy library
 $susy: (
@@ -37,7 +37,7 @@ $susy: (
 // Custom Grid
 $class-big: col-big !default;
 $class-sml: col-sml !default;
-$class-xs: col-xs !default;
+$class-xsl: col-xsl !default;
 $grid-columns: 12;
 
 @for $i from 1 through $grid-columns {
@@ -50,7 +50,7 @@ $grid-columns: 12;
     } 
   }
   @include susy-breakpoint($small-width) { 
-    .#{$class-xs}-#{$i} { 
+    .#{$class-xsl}-#{$i} { 
         @include span($i);
     }
   }
@@ -164,16 +164,102 @@ nav {
 }
 
 #play-icon {
+    cursor: pointer;
     color: $white;
     font-size: 3em;
 }
 
+#topic {
+    span {
+        &.white-font {
+            font-family: $light-font;
+        }
+    }
+    strong {
+        &.yellow-font {
+            font-family: $regular-font;
+            font-weight: bold;
+        }
+    }
+}
+
+.social-networks {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -4px;
+
+    li {
+        list-style: none;
+        margin-bottom: 15px;
+        a {
+            color: $white;
+        }
+    }
+}
+
 #scroll-down {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 10px;
+    left: 0;
+    text-align: center;
+    width: 100%;
 
     small {
+        color: $grey;
+        padding: 10px 0;
+        font-size: 0.75em;
+        text-transform: uppercase;
+    }
+
+    i {
+        display: block;
+        font-size: 1.7em;        
         color: $white;
+    }
+}
+
+.modal {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    background: $black-opacity-9;
+    padding: 2% 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+
+    #close-modal {
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        
+        &:hover {
+            color: $grey;
+        }
+    }
+
+    .modal-title {
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .modal-dialog {
+        background: #fff;
+        border-radius: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .modal-content {
+        iframe {
+            min-height: 500px;
+            height: 100%;
+            width: 100%;
+        }
     }
 }

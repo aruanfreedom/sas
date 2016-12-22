@@ -39,33 +39,50 @@ body, .onepage-wrapper, html {
 }
 .onepage-pagination li {
   padding: 0;
+  height: 30px;
+  width: 20px;
   text-align: center;
 }
 .onepage-pagination li a{
-  padding: 10px;
+  padding: 0px;
   width: 4px;
   height: 4px;
   display: block;
   
 }
-.onepage-pagination li a:before{
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(0,0,0,0.85);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
+.onepage-pagination li a{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    font-size: 0.7em;
+    width: 10px;
+    height: 10px;
+    left: 5px;
+    padding-top: 1px;
+    background: none;
+    border: 1px solid #1c1f21;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 }
 
-.onepage-pagination li a.active:before{
-  width: 10px;
-  height: 10px;
-  background: none;
-  border: 1px solid black;
+.onepage-pagination li a.active{
+  width: 20px;
+  height: 17px;
+  padding-top: 4px;
   margin-top: -4px;
-  left: 8px;
+  background: #1c1f21;
+  border: 1px solid #1c1f21;
+  text-decoration: none;
+  left: 0px;
+}
+
+.onepage-pagination li a span{
+  display: none;
+}
+
+.onepage-pagination li a.active span{
+  display: block;
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {

@@ -10,6 +10,17 @@
     <title>Sas</title>
 </head>
 <body>
+    <div class="modal">
+        <div class="col-big-6 col-xsl-10 center modal-dialog">
+            <div class="modal-title">
+                <h2 class="left">Видео</h2>
+                <i id='close-modal' class="fa fa-times right"></i>
+            </div>
+            <div class="modal-content">
+                <iframe src="https://www.youtube.com/embed/IxGvm6btP1A" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <div id="main">
         <section id="home">
             <div class="home-bg">
@@ -43,28 +54,34 @@
                             <span><a href="tel:87172487836">8 (7172) 48-78-36</a></span>
                         </div>
                     </div>
-                    <div class="col-big-12">
+                    <div id="topic" class="col-big-12">
                         <div class="video text-center">
-                           <a href="#video"><i id="play-icon" class="fa fa-play-circle" aria-hidden="true"></i></a> 
+                           <i id="play-icon" class="fa fa-play-circle" aria-hidden="true"></i> 
                            <h2><span class="white-font">Кто рискует -</span> <strong class="yellow-font">Побеждает</strong></h2> 
                         </div>
                     </div>
                     <div id="scroll-down">
+                        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
                         <small>Прокрутите вниз</small>
                     </div>
+                    <ul class="social-networks">
+                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </section>
         <section>page 2</section>    
+         <section>page 2</section>  
+          <section>page 2</section>  
+           <section>page 2</section>  
     </div>
 <!-- Scripts start -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/jquery.onepage-scroll.min.js"></script>
-<script>
-    $(function() { 
-        $('#main').onepage_scroll();
-    })
-</script>
+<script src="js/main.js"></script>
 <!-- Scripts end -->
 </body>
 </html>
