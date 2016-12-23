@@ -16,8 +16,8 @@ $thin-font: "SFUIDisplay-Thin";
 $semibold-font: "SFUIDisplay-Semibold";
 
 // display width
-$medium-width: 961px 1366px;
-$small-width: 360px 960px;
+$medium-width: 360px 1366px;
+// $small-width: 360px 960px;
 
 // Settings Sussy library
 $susy: (
@@ -49,11 +49,11 @@ $grid-columns: 12;
         @include span($i);
     } 
   }
-  @include susy-breakpoint($small-width) { 
-    .#{$class-xsl}-#{$i} { 
-        @include span($i);
-    }
-  }
+//   @include susy-breakpoint($small-width) { 
+//     .#{$class-xsl}-#{$i} { 
+//         @include span($i);
+//     }
+//   }
 } 
 
 body {
@@ -145,6 +145,11 @@ nav {
 #top-contact {
     color: $grey;
     padding-top: 45px;
+    @include susy-breakpoint($medium-width) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
     #left {
         font-family: $light-font;
     }
@@ -170,6 +175,7 @@ nav {
 }
 
 #topic {
+    margin-top: 10px;
     span {
         &.white-font {
             font-family: $light-font;

@@ -7,18 +7,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-1 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 8.33333%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -36,18 +26,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-2 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -65,18 +45,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-3 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 25%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -94,18 +64,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-4 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -123,18 +83,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-5 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 41.66667%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -152,18 +102,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-6 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -181,18 +121,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-7 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 58.33333%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -210,18 +140,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-8 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 66.66667%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -239,18 +159,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-9 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 75%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -268,18 +178,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-10 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -297,18 +197,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-11 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 91.66667%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -326,18 +216,8 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 961px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1366px) {
   .col-sml-12 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%; } }
-
-@media (min-width: 360px) and (max-width: 960px) {
-  .col-xsl-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -421,6 +301,11 @@ nav {
 #top-contact {
   color: #5b5b5b;
   padding-top: 45px; }
+  @media (min-width: 360px) and (max-width: 1366px) {
+    #top-contact {
+      position: absolute;
+      top: 0;
+      right: 0; } }
   #top-contact #left {
     font-family: "SFUIDisplay-Light"; }
   #top-contact #right {
@@ -439,12 +324,13 @@ nav {
   color: #fff;
   font-size: 3em; }
 
-#topic span.white-font {
-  font-family: "SFUIDisplay-Light"; }
-
-#topic strong.yellow-font {
-  font-family: "SFUIDisplay-Regular";
-  font-weight: bold; }
+#topic {
+  margin-top: 10px; }
+  #topic span.white-font {
+    font-family: "SFUIDisplay-Light"; }
+  #topic strong.yellow-font {
+    font-family: "SFUIDisplay-Regular";
+    font-weight: bold; }
 
 .social-networks {
   position: absolute;
