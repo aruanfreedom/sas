@@ -59,6 +59,46 @@
                     }
                 }, 50);
             }
+
+            // Slider custom script
+            var clientFunc = function () {
+                var clients = $("#clieants-block .item"),
+                    allClients = $("#clieants-block .item").length - 1,
+                    limit = $("#clieants-block .item").length - 1,
+                    sliderPage = 0;
+                    for(var linkItem = 1; linkItem < clients.length / 3 + 1; linkItem++) {
+                        $('#clieants-block .dynamic-add-link').append("<a href='#" + linkItem + "' data-link='" + linkItem + "'></a>");
+                    }
+                    $("#clieants-block .dynamic-add-link a:first").addClass("active");
+                    for(var itemBlock = 0; itemBlock < clients.length; itemBlock++) {    
+                        if (limit === allClients ) {
+                            limit = limit - 3;     
+                            sliderPage++;                      
+                            $(clients[itemBlock]).attr("data-index-visible", sliderPage); 
+                        } else {
+                            $(clients[itemBlock]).attr("data-index-visible", sliderPage);
+                        }
+                        allClients--;
+                        
+                    }
+                    $('#clieants-block .dynamic-add-link a').on("click", function(e) {
+                        var number = $(this).attr("data-link"),
+                            count = $("#clieants-block .item"),
+                            linkNumber = $("#clieants-block .item").attr("data-index-visible");
+                        $('#clieants-block .dynamic-add-link a').removeClass("active");
+                        $(this).addClass("active");
+                        $("#clieants-block .item").hide();
+                        for(var item = 0; item < count.length; item++){
+                            if (number === $(count[item]).attr("data-index-visible")) {
+                                $(count[item]).show();                                  
+                            }
+                        }
+                        e.preventDefault();
+                    });
+            };
+
+            clientFunc();
+           
          
      }        
 

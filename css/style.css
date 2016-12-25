@@ -7,7 +7,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -26,7 +26,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -45,7 +45,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -64,7 +64,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -83,7 +83,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -102,7 +102,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -121,7 +121,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -140,7 +140,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -159,7 +159,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -178,7 +178,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -197,7 +197,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -216,7 +216,7 @@
   padding-left: 2.08333%;
   padding-right: 2.08333%; }
 
-@media (min-width: 360px) and (max-width: 1366px) {
+@media (min-width: 360px) and (max-width: 1280px) {
   .col-sml-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -239,6 +239,9 @@ body {
 
 #logo {
   padding-top: 90px; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    #logo {
+      padding-top: 30px; } }
   #logo h1 {
     color: #fff300;
     font-weight: normal;
@@ -301,7 +304,7 @@ nav {
 #top-contact {
   color: #5b5b5b;
   padding-top: 45px; }
-  @media (min-width: 360px) and (max-width: 1366px) {
+  @media (min-width: 360px) and (max-width: 1280px) {
     #top-contact {
       position: absolute;
       top: 0;
@@ -318,14 +321,43 @@ nav {
     color: #5b5b5b;
     font-size: 0.9em;
     text-decoration: none; }
+    #top-contact a:hover, #top-contact a.active {
+      color: #fff; }
+
+#lang {
+  margin-top: 10px; }
 
 #play-icon {
   cursor: pointer;
-  color: #fff;
-  font-size: 3em; }
+  text-decoration: none;
+  margin: 0 auto; }
+
+.icon {
+  display: block;
+  height: 33px;
+  text-decoration: none;
+  overflow: hidden; }
+  .icon.icon-play-header {
+    height: 65px;
+    width: 65px; }
+    .icon.icon-play-header img {
+      margin-top: -27px; }
+  .icon.icon-mouse {
+    margin: 0 auto;
+    height: 20px;
+    width: 12px; }
+    .icon.icon-mouse img {
+      margin-top: -56px;
+      width: 40px; }
+  .icon.icon-tehnology {
+    background: url("../img/icons/all-icons.svg") left no-repeat;
+    height: 20px;
+    width: 12px; }
 
 #topic {
   margin-top: 10px; }
+  #topic h2 {
+    font-size: 2.5em; }
   #topic span.white-font {
     font-family: "SFUIDisplay-Light"; }
   #topic strong.yellow-font {
@@ -334,14 +366,28 @@ nav {
 
 .social-networks {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 20px;
-  margin-top: -4px; }
+  margin-top: 0; }
   .social-networks li {
     list-style: none;
-    margin-bottom: 15px; }
+    margin-bottom: 25px; }
     .social-networks li a {
-      color: #fff; }
+      display: block;
+      color: #fff;
+      overflow: hidden;
+      height: 18px;
+      width: 18px; }
+      .social-networks li a img.soc-twitter {
+        margin-top: -60px; }
+      .social-networks li a img.soc-google {
+        margin-top: -120px; }
+      .social-networks li a img.soc-instagram {
+        margin-top: -177px; }
+      .social-networks li a img.soc-youtube {
+        margin-top: -240px; }
+      .social-networks li a img.soc-vk {
+        margin-top: -300px; }
 
 #scroll-down {
   position: absolute;
@@ -388,3 +434,211 @@ nav {
     min-height: 500px;
     height: 100%;
     width: 100%; }
+
+#services {
+  background: url("../img/two-page-bg.jpg") no-repeat left center #121212;
+  background-size: 100%; }
+
+.name-block {
+  color: #fff300;
+  font-size: 2.5em;
+  margin: 3% 0 5% 0; }
+
+.service-block-item {
+  border: 1px solid #fff300;
+  border-radius: 5px;
+  padding: 20px 10px;
+  position: relative; }
+  .service-block-item h3 {
+    color: #fff;
+    font-family: "SFUIDisplay-Thin";
+    margin: 0; }
+  .service-block-item ul {
+    margin: 15px 0 55px 0;
+    list-style: url("../img/icons/check.png");
+    height: 235px; }
+    .service-block-item ul li {
+      color: #fff300;
+      margin: 10px 0;
+      font-size: 0.8em; }
+  .service-block-item .btn {
+    position: absolute;
+    left: 25px;
+    bottom: 16px;
+    width: 80%; }
+
+.btn {
+  background: #5b5b5b;
+  border: 1px solid #5b5b5b;
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-appearance: none;
+  font-size: 1.1em;
+  padding: 10px;
+  width: 100%; }
+  .btn.btn-yellow {
+    background: #fff300;
+    border: 1px solid #fff300;
+    color: #000; }
+
+#we-jobs {
+  background: #121212; }
+
+.punkts-circle {
+  border: 5px solid #fff300;
+  border-radius: 50%;
+  position: relative;
+  top: 55px;
+  line-height: 340px;
+  height: 355px;
+  width: 355px; }
+  .punkts-circle h2 {
+    height: 100%;
+    text-transform: uppercase;
+    color: #fff300;
+    font-size: 4.5em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+
+.punkts-icons.top {
+  position: absolute;
+  top: 0;
+  line-height: 0;
+  width: 100%; }
+  .punkts-icons.top .punkts-theme {
+    color: #fff;
+    position: absolute;
+    font-size: 1.5em;
+    top: -70px;
+    left: 0;
+    width: 100%; }
+  .punkts-icons.top strong.icons-name {
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 132px;
+    margin-top: -50px;
+    height: 90px;
+    width: 90px; }
+    .punkts-icons.top strong.icons-name .icon-tehnology {
+      background: url(../img/icons/we-icons.svg) center center no-repeat #fff300;
+      background-size: 65%;
+      background-position: 27px 14px;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      line-height: 0;
+      display: block; }
+
+.punkts-icons.left.top {
+  right: 10px;
+  top: 120px; }
+  .punkts-icons.left.top .punkts-theme {
+    left: 90%;
+    top: 0; }
+  .punkts-icons.left.top strong.icons-name {
+    left: 90%; }
+  .punkts-icons.left.top strong.icons-name .icon-tehnology {
+    background-position: 21px -76px; }
+
+.punkts-icons.bottom-right.top {
+  right: 0;
+  top: auto;
+  bottom: 0; }
+  .punkts-icons.bottom-right.top .punkts-theme {
+    left: 65%;
+    top: 0; }
+  .punkts-icons.bottom-right.top strong.icons-name {
+    left: 65%; }
+  .punkts-icons.bottom-right.top strong.icons-name .icon-tehnology {
+    background-position: 16px -330px; }
+
+.punkts-icons.bottom-left.top {
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 0; }
+  .punkts-icons.bottom-left.top .punkts-theme {
+    left: -82%;
+    top: 0; }
+  .punkts-icons.bottom-left.top strong.icons-name {
+    left: 10%; }
+  .punkts-icons.bottom-left.top strong.icons-name .icon-tehnology {
+    background-position: 16px -247px; }
+
+.punkts-icons.top-left.top {
+  right: auto;
+  top: 120px;
+  left: -20%;
+  bottom: auto; }
+  .punkts-icons.top-left.top .punkts-theme {
+    left: -82%;
+    top: 0; }
+  .punkts-icons.top-left.top strong.icons-name {
+    left: 10%; }
+  .punkts-icons.top-left.top strong.icons-name .icon-tehnology {
+    background-position: 16px -167px; }
+
+#clients {
+  background: #121212; }
+
+.client-item {
+  background: #ffd700;
+  padding: 20px 20px;
+  position: relative;
+  height: 140px;
+  border-radius: 10px; }
+  .client-item::before {
+    content: "";
+    background: url(../img/icons/question.png) center center no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: -13px;
+    height: 35px;
+    width: 35px; }
+  .client-item p {
+    color: #5b5b5b;
+    overflow-y: auto;
+    height: 100px; }
+    .client-item p:before {
+      content: '" ';
+      color: red; }
+    .client-item p:after {
+      content: ' "';
+      color: red; }
+  .client-item small {
+    color: #5b5b5b;
+    position: absolute;
+    bottom: 20px; }
+
+.client-items {
+  margin: 30px 0 0 0; }
+  .client-items img {
+    border-radius: 50%; }
+
+.clients-visible {
+  position: relative;
+  overflow: hidden;
+  height: 284px; }
+
+#clieants-block a {
+  clear: both;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0px 5px;
+  position: relative;
+  top: 50px;
+  height: 10px;
+  width: 10px; }
+  #clieants-block a.active {
+    background: #fff; }
+
+.destroy {
+  display: none; }

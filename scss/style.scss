@@ -4,9 +4,11 @@
 $white: #fff;
 $black: #000;
 $yellow: #fff300;
+$dark-yellow: #ffd700;
 $grey: #5b5b5b;
 $dark-grey: #373839;
 $black-opacity-9: rgba(0,0,0, .9);
+$block-gray: #121212;
 
 // Fonts
 $light-font: "SFUIDisplay-Light";
@@ -16,7 +18,7 @@ $thin-font: "SFUIDisplay-Thin";
 $semibold-font: "SFUIDisplay-Semibold";
 
 // display width
-$medium-width: 360px 1366px;
+$medium-width: 360px 1280px;
 // $small-width: 360px 960px;
 
 // Settings Sussy library
@@ -72,6 +74,9 @@ body {
 
 #logo {
     padding-top: 90px;
+    @include susy-breakpoint($medium-width) {
+        padding-top: 30px;
+    }
     h1 {
         color: $yellow;
         font-weight: normal;
@@ -165,17 +170,55 @@ nav {
         color: $grey;
         font-size: 0.9em;
         text-decoration: none;
+        &:hover, &.active {
+            color: $white;
+        }
     }
+}
+
+#lang {
+    margin-top: 10px;
 }
 
 #play-icon {
     cursor: pointer;
-    color: $white;
-    font-size: 3em;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.icon {
+    display: block;
+    height: 33px;
+    text-decoration: none;
+    overflow: hidden;    
+    &.icon-play-header {
+        height: 65px;
+        width: 65px; 
+        img {
+            margin-top: -27px;
+        }
+    }
+    &.icon-mouse {
+            margin: 0 auto;
+            height: 20px;
+            width: 12px;
+        img {
+            margin-top: -56px;
+            width: 40px;
+        }
+    }
+    &.icon-tehnology {
+        background: url("../img/icons/all-icons.svg") left no-repeat;
+        height: 20px;
+        width: 12px;
+    }
 }
 
 #topic {
     margin-top: 10px;
+    h2 {
+        font-size: 2.5em;
+    }
     span {
         &.white-font {
             font-family: $light-font;
@@ -191,15 +234,37 @@ nav {
 
 .social-networks {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 20px;
-    margin-top: -4px;
+    margin-top: 0;
 
     li {
         list-style: none;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         a {
+            display: block;
             color: $white;
+            overflow: hidden;
+            height: 18px;
+            width: 18px;
+
+            img {
+                &.soc-twitter {
+                    margin-top: -60px;  
+                }
+                &.soc-google{
+                    margin-top: -120px;
+                }
+                &.soc-instagram{
+                    margin-top: -177px;
+                }
+                &.soc-youtube{
+                    margin-top: -240px;
+                }
+                &.soc-vk{
+                    margin-top: -300px;
+                }
+            }
         }
     }
 }
@@ -268,4 +333,263 @@ nav {
             width: 100%;
         }
     }
+}
+
+#services {
+    background: url("../img/two-page-bg.jpg") no-repeat left center $block-gray;
+    background-size: 100%;
+}
+
+.name-block {
+    color: $yellow;
+    font-size: 2.5em;
+    margin: 3% 0 5% 0;
+}
+
+.service-block-item {
+    border: 1px solid #fff300;
+    border-radius: 5px;
+    padding: 20px 10px;
+    position: relative;
+    h3 {
+        color: $white;
+        font-family: $thin-font;
+        margin: 0;
+    }
+    ul {
+        margin: 15px 0 55px 0;
+        list-style: url('../img/icons/check.png');
+        height: 235px;
+        li {
+            color: $yellow;
+            margin: 10px 0;
+            font-size: 0.8em;
+        }
+    }
+    .btn {
+        position: absolute;
+        left: 25px;
+        bottom: 16px;
+        width: 80%;
+    }
+}
+
+.btn {
+    background: $grey;
+    border: 1px solid $grey;
+    color: #000;
+    border-radius: 10px;
+    font-weight: bold;
+    -webkit-appearance: none;
+    font-size: 1.1em;
+    padding: 10px;
+    width: 100%;
+        &.btn-yellow {
+            background: $yellow;
+            border: 1px solid $yellow;
+            color: #000;
+        }
+}
+
+#we-jobs {
+    background: $block-gray;
+}
+
+.punkts-circle {
+    border: 5px solid #fff300;
+    border-radius: 50%;
+    position: relative;
+    top: 55px;
+    line-height: 340px;
+    height: 355px;
+    width: 355px;
+        h2 {
+            height: 100%;
+            text-transform: uppercase;
+            color: #fff300;
+            font-size: 4.5em;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+}
+
+.punkts-icons {
+    &.top {
+        position: absolute;
+        top: 0;
+        line-height: 0;
+        width: 100%;
+        .punkts-theme {
+            color: #fff;
+            position: absolute;
+            font-size: 1.5em;
+            top: -70px;
+            left: 0;
+            width: 100%;
+        }
+        strong.icons-name {
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 132px;
+            margin-top: -50px;
+            height: 90px;
+            width: 90px;
+            .icon-tehnology {
+                background: url(../img/icons/we-icons.svg) center center no-repeat #fff300;
+                background-size: 65%;
+                background-position: 27px 14px;
+                border-radius: 50%;
+                height: 100%;
+                width: 100%;
+                line-height: 0;
+                display: block;
+            }
+        }
+    }
+    &.left.top {
+        right: 10px;
+        top: 120px;
+        .punkts-theme {
+            left: 90%;
+            top: 0;
+        }
+        strong.icons-name {
+            left: 90%;
+        }
+        strong.icons-name .icon-tehnology {
+            background-position: 21px -76px;
+        }
+    }
+    &.bottom-right.top {
+        right: 0;
+        top: auto;
+        bottom: 0;
+        .punkts-theme {
+            left: 65%;
+            top: 0;
+        }
+        strong.icons-name {
+            left: 65%;
+        }
+        strong.icons-name {
+            .icon-tehnology {
+                background-position: 16px -330px;
+            }
+        }
+    }
+    &.bottom-left.top {
+        right: auto;
+        top: auto;
+        left: 0;    
+        bottom: 0;
+        .punkts-theme {
+            left: -82%;
+            top: 0;
+        }
+        strong.icons-name {
+            left: 10%;
+        }
+        strong.icons-name {
+            .icon-tehnology {
+                background-position: 16px -247px;
+            }
+        }
+    }
+    &.top-left.top {
+        right: auto;
+        top: 120px;
+        left: -20%;
+        bottom: auto;
+        .punkts-theme {
+            left: -82%;
+            top: 0;
+        }
+        strong.icons-name {
+            left: 10%;
+        }
+        strong.icons-name {
+            .icon-tehnology {
+                background-position: 16px -167px;
+            }
+        }
+    }
+}
+
+#clients {
+    background: $block-gray;
+}
+
+.client-item {
+    background: $dark-yellow;
+    padding: 20px 20px;
+    position: relative;
+    height: 140px;
+    border-radius: 10px;
+    &::before {
+        content: "";
+        background: url(../img/icons/question.png) center center no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -20px;
+        bottom: -13px;
+        height: 35px;
+        width: 35px;
+    }
+    p {
+        color: $grey;
+        overflow-y: auto;
+        height: 100px;
+        &:before {
+            content: '" ';
+            color: red;
+        }
+        &:after {
+            content: ' "';
+            color: red;
+        }
+    }
+    small {
+        color: $grey;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+.client-items {
+    margin: 30px 0 0 0;
+    img {
+        border-radius: 50%;
+    }
+}
+
+.clients-visible {
+    position: relative;
+    overflow: hidden;
+    height: 284px;
+}
+
+#clieants-block {
+    a {
+        clear: both;
+        display: inline-block;
+        border: 2px solid $white;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0px 5px;
+        position: relative;
+        top: 50px;
+        height: 10px;
+        width: 10px;
+        &.active {
+            background: $white;
+        }
+    }
+}
+
+.destroy {
+    display: none;
 }
