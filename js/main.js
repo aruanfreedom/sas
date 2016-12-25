@@ -107,7 +107,7 @@
             });
 
             // scroll link
-             $('a[href^="#"]').click(function() {
+             $('nav a[href^="#"]').click(function() {
                var el = $(this).attr('href'),
                 clear = el.replace("#", "");
                console.log(el)
