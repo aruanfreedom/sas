@@ -87,10 +87,14 @@
                             linkNumber = $("#clieants-block .item").attr("data-index-visible");
                         $('#clieants-block .dynamic-add-link a').removeClass("active");
                         $(this).addClass("active");
-                        $("#clieants-block .item").hide();
+                        $("#clieants-block .item").animate({opacity: 0}, 500, function(){
+                            $(this).hide();
+                        }); 
                         for(var item = 0; item < count.length; item++){
                             if (number === $(count[item]).attr("data-index-visible")) {
-                                $(count[item]).show();                                  
+                                $(count[item]).animate({opacity: 1}, 500, function(){
+                                    $(this).show();
+                                });                                  
                             }
                         }
                         e.preventDefault();
