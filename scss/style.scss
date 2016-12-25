@@ -9,6 +9,7 @@ $grey: #5b5b5b;
 $dark-grey: #373839;
 $black-opacity-9: rgba(0,0,0, .9);
 $block-gray: #121212;
+$input-gray: #ccc;
 
 // Fonts
 $light-font: "SFUIDisplay-Light";
@@ -180,7 +181,7 @@ nav {
     margin-top: 10px;
 }
 
-#play-icon {
+.play-icon {
     cursor: pointer;
     text-decoration: none;
     margin: 0 auto;
@@ -196,6 +197,18 @@ nav {
         width: 65px; 
         img {
             margin-top: -27px;
+        }
+    }
+    &.icon-play-bottom {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -31px;
+        margin-top: 40px;
+        height: 65px;
+        width: 65px;
+        img {
+            margin-top: -152px;
         }
     }
     &.icon-mouse {
@@ -237,7 +250,21 @@ nav {
     top: 45%;
     right: 20px;
     margin-top: 0;
-
+    &.footer-bottom {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        padding-left: 25px !important;
+        margin-bottom: 0;
+        color: #5b5b5b;
+        margin-top: 7px;
+        float: left;
+        width: 100px;
+        li {
+            display: inline-block;
+            margin: 10px 5px;
+        }
+    }
     li {
         list-style: none;
         margin-bottom: 25px;
@@ -338,6 +365,9 @@ nav {
 #services {
     background: url("../img/two-page-bg.jpg") no-repeat left center $block-gray;
     background-size: 100%;
+    h2 {
+        margin-bottom: 80px;
+    }
 }
 
 .name-block {
@@ -521,6 +551,9 @@ nav {
 
 #clients {
     background: $block-gray;
+    h2 {
+        margin: 80px 0;
+    }
 }
 
 .client-item {
@@ -542,7 +575,8 @@ nav {
     p {
         color: $grey;
         overflow-y: auto;
-        height: 100px;
+        margin-top: 0;
+        height: 140px;
         &:before {
             content: '" ';
             color: red;
@@ -592,4 +626,164 @@ nav {
 
 .destroy {
     display: none;
+}
+
+#about {
+    background: $block-gray;
+    h2 {
+        margin: 50px 0;
+    }
+}
+
+#world-maps {
+    position: relative;
+}
+
+.w100 {
+    width: 100%;
+}
+
+#consorcium {
+    background: $block-gray;
+    h2 {
+        margin: 80px 0;
+    }
+}
+
+.footer {
+    background: $block-gray;
+}
+
+.maps {
+    position: relative;
+    iframe {
+        height: 350px;
+        width: 100%;
+    }
+    .form {
+        background: #fff;
+        border-radius: 10px;
+        position: absolute;
+        padding: 0 30px;
+        bottom: -50px;
+        margin-left: 19px;
+        left: 50%;
+        input, textarea {
+            border: 1px solid $input-gray;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            border-radius: 30px;
+            padding: 10px 40px;
+            width: auto;
+        }
+        h2 {
+            padding: 0 17px;
+            color: $grey;
+        }
+        .form-item {
+            margin-bottom: 20px;
+            padding: 0 17px;
+        }
+    }
+}
+
+#contacts {
+    .contacts-title {
+        border-bottom: 2px solid #dd4410;
+        padding-bottom: 11px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-size: 2.2em;
+        width: 152px;
+    }
+    .contacts-item {
+        h4 {
+            color: $white;
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-left: 20px;
+            margin-bottom: 0;
+            color: $grey;
+            margin-top: 7px;
+            a {
+                color: $grey;
+                text-decoration: none;
+            }
+            li {
+                font-size: 0.8em;
+            }
+        }
+        small {
+            color: $grey;
+            float: left;
+            font-size: 0.8em;
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
+    }
+}
+
+.follow {
+    h4 {
+        text-align: right;
+        padding-right: 0;
+    }
+    img#logo-mini {
+        margin: 21px 0 10px 0;
+    }
+}
+
+.icon-footer {
+    position: relative;
+    &:before {
+        content: "";
+        background: url(../img/icons/all-icons.svg) no-repeat;
+        background-size: 100%;
+        background-position: 0px -1px;
+        position: absolute;
+        height: 16px;
+        top: 20px;
+        left: 8px;
+        width: 30px;
+    }
+    &.telephone-icon {
+        &:before {
+            background-position: 0px -108px;
+            position: absolute;
+            height: 11px;
+            top: 2px;
+            left: -4px;
+            width: 30px;
+        }
+    }
+    &.adress-icon {
+        &:before {
+            content: "";
+            background: url(../img/icons/all-icons.svg) no-repeat;
+            background-size: 100%;
+            background-position: 0px -131px;
+            position: absolute;
+            height: 12px;
+            top: 23px;
+            left: 8px;
+            width: 32px;
+        }
+    }
+}
+
+
+
+.row {
+    margin-left: -25px;
+    margin-right: -25px;
 }

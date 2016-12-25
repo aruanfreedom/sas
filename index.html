@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="css/fonts/SFUIDisplay/stylesheet.css">
     <link rel="stylesheet" href="css/one-page-scroll.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -61,7 +62,7 @@
                     </div>
                     <div id="topic" class="col-big-12">
                         <div class="video text-center">
-                           <a id="play-icon" class="icon icon-play-header">
+                           <a class="icon icon-play-header play-icon">
                                <img src="img/icons/all-icons.svg" alt="icons sas">
                             </a> 
                            <h2><span class="white-font">Кто рискует -</span> <strong class="yellow-font">Побеждает</strong></h2> 
@@ -219,7 +220,7 @@
                             <small>- Caroline Turing</small>
                         </div>
                         <div class="client-items text-center">
-                            <img src="img/person/person3.png" alt="person3">
+                            <img src="img/person/person2.png" alt="person3">
                         </div>
                     </div>
                     <div class="col-big-4 item">
@@ -228,7 +229,16 @@
                             <small>- Caroline Turing</small>
                         </div>
                         <div class="client-items text-center">
-                            <img src="img/person/person3.png" alt="person3">
+                            <img src="img/person/person2.png" alt="person3">
+                        </div>
+                    </div>
+                    <div class="col-big-4 item">
+                        <div class="client-item">
+                            <p>Это организация, которая уделяет внимание каждому клиенту.</p>
+                            <small>- Caroline Turing</small>
+                        </div>
+                        <div class="client-items text-center">
+                            <img src="img/person/person2.png" alt="person3">
                         </div>
                     </div>
                     <div class="col-big-4 item">
@@ -259,15 +269,124 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center dynamic-add-link">
-                    <!--<a href="#" data-link="0" class="active"></a>-->
+                <div class="text-center dynamic-add-link"></div>
+            </div>
+        </section>  
+        <section id="about">
+            <div class="col-big-12 text-center">
+                <h2 class="name-block white-font">О нас</h2>                
+            </div>
+            <div id="world-maps" class="col-big-8 text-center center">
+                <a class="icon icon-play-bottom play-icon">
+                    <img src="img/icons/all-icons.svg" alt="icons sas">
+                </a> 
+                <img src="img/world-maps.png" class="w100" alt="world maps sas">
+            </div>
+        </section>  
+        <section id="consorcium">
+            <div class="col-big-12 text-center">
+                <h2 class="name-block">Члены консорциума</h2>                
+            </div>
+            <div class="col-big-8 text-center center">
+                <div class="col-big-4 consorcium-item">
+                    <img src="img/consorcium/logo1.png" class="w100" alt="logo">
+                    <p class="white-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quos.</p>
+                </div>
+                <div class="col-big-4 consorcium-item">
+                    <img src="img/consorcium/logo1.png" class="w100" alt="logo">
+                    <p class="white-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, ab.</p>
+                </div>
+                <div class="col-big-4 consorcium-item">
+                    <img src="img/consorcium/logo1.png" class="w100" alt="logo">
+                    <p class="white-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, placeat?</p>
+                </div>
+            </div>    
+        </section>  
+        <section class="footer">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d640750.5681336911!2d70.76995775147641!3d51.1466067827038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424580c47db54609%3A0x97f9148dddb19228!2z0JDRgdGC0LDQvdCwIDAyMDAwMA!5e0!3m2!1sru!2skz!4v1482656823657"  frameborder="0" style="border:0" ></iframe>
+                <div class="form col-big-4">
+                    <h2>Заказать Услугу</h2>
+                    <form action="#">
+                        <div class="col-big-6 form-item">
+                            <input type="text" name="name" class="w100" placeholder="Ваше имя">
+                        </div>
+                        <div class="col-big-6 form-item">
+                            <input type="email" name="email" class="w100" clas placeholder="Ваш email">                            
+                        </div>
+                        <div class="col-big-12 form-item">
+                            <textarea name="message" placeholder="Ваш текст" class="w100"></textarea>
+                        </div>
+                        <div class="col-big-12 form-item">
+                            <button type="submit" class="btn btn-yellow">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <div id="contacts" class="col-big-10 center">
+                <div class="col-big-12">
+                    <h3 class="contacts-title white-font">Контакты</h3>
+                    <div class="col-big-8">
+                        <div class="row">
+                            <div class="contacts-item col-big-4 icon-footer">
+                                <h4>Email</h4>
+                                <ul>
+                                    <li>info@sas-security.kz</li>
+                                    <li>contract@sas-security.kz</li>
+                                </ul>
+                                <div class="icon-footer telephone-icon">
+                                <h4>Телефон</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="tel:8700587-5825">+7 (700) 587-5825</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contacts-item col-big-4 icon-footer adress-icon">
+                                <h4>Адрес</h4>
+                                <ul>
+                                    <li>Республика Казахстан, </li>
+                                    <li>г. Астана, район Сарыарка, ул. Алтын Емел 9 </li>
+                                    <li>(угол ул. Гёте)График работы: </li>
+                                    <li>Пн - Пт: 9:00 - 18:00</li>
+                                    <li>Выходной: Сб - Вс</li>
+                                </ul>
+                            </div>
+                            <div class="contacts-item col-big-4">
+                                <h4>Меню</h4>
+                                <ul>
+                                    <li>Главная</li>
+                                    <li>Наши услуги</li>
+                                    <li>Как мы работаем</li>
+                                    <li>Наши клиентыО насКонтакты</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-big-4 follow">
+                         <div class="contacts-item text-right right">
+                                <img id="logo-mini" src="img/logo-mini.png" class="left" alt="logo sas">
+                                <h4 class="left">Следите за нами</h4>
+                                <ul class="social-networks footer-bottom">
+                                    <li><a href="#facebook" target="_blank"><img class="soc-facebook" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                    <li><a href="#twitter" target="_blank"><img class="soc-twitter" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                    <li><a href="#google" target="_blank"><img class="soc-google" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                    <li><a href="#instagram" target="_blank"><img class="soc-instagram" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                    <li><a href="#youtube" target="_blank"><img class="soc-youtube" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                    <li><a href="#vk" target="_blank"><img class="soc-vk" src="img/icons/social-network.svg" alt="social sas"></a></li>
+                                </ul>
+                                
+                                <small>Copyright © 2016,  Все права защищены.</small>
+                            </div>
+                    </div>
                 </div>
             </div>
         </section>  
-        <section>page 2</section>  
-        <section>page 2</section>  
-        <section>page 2</section>  
     </div>
+    </div>
+
 <!-- Scripts start -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/jquery.onepage-scroll.min.js"></script>

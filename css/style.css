@@ -327,7 +327,7 @@ nav {
 #lang {
   margin-top: 10px; }
 
-#play-icon {
+.play-icon {
   cursor: pointer;
   text-decoration: none;
   margin: 0 auto; }
@@ -342,6 +342,16 @@ nav {
     width: 65px; }
     .icon.icon-play-header img {
       margin-top: -27px; }
+  .icon.icon-play-bottom {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -31px;
+    margin-top: 40px;
+    height: 65px;
+    width: 65px; }
+    .icon.icon-play-bottom img {
+      margin-top: -152px; }
   .icon.icon-mouse {
     margin: 0 auto;
     height: 20px;
@@ -369,6 +379,19 @@ nav {
   top: 45%;
   right: 20px;
   margin-top: 0; }
+  .social-networks.footer-bottom {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    padding-left: 25px !important;
+    margin-bottom: 0;
+    color: #5b5b5b;
+    margin-top: 7px;
+    float: left;
+    width: 100px; }
+    .social-networks.footer-bottom li {
+      display: inline-block;
+      margin: 10px 5px; }
   .social-networks li {
     list-style: none;
     margin-bottom: 25px; }
@@ -438,6 +461,8 @@ nav {
 #services {
   background: url("../img/two-page-bg.jpg") no-repeat left center #121212;
   background-size: 100%; }
+  #services h2 {
+    margin-bottom: 80px; }
 
 .name-block {
   color: #fff300;
@@ -585,6 +610,8 @@ nav {
 
 #clients {
   background: #121212; }
+  #clients h2 {
+    margin: 80px 0; }
 
 .client-item {
   background: #ffd700;
@@ -604,7 +631,8 @@ nav {
   .client-item p {
     color: #5b5b5b;
     overflow-y: auto;
-    height: 100px; }
+    margin-top: 0;
+    height: 140px; }
     .client-item p:before {
       content: '" ';
       color: red; }
@@ -642,3 +670,127 @@ nav {
 
 .destroy {
   display: none; }
+
+#about {
+  background: #121212; }
+  #about h2 {
+    margin: 50px 0; }
+
+#world-maps {
+  position: relative; }
+
+.w100 {
+  width: 100%; }
+
+#consorcium {
+  background: #121212; }
+  #consorcium h2 {
+    margin: 80px 0; }
+
+.footer {
+  background: #121212; }
+
+.maps {
+  position: relative; }
+  .maps iframe {
+    height: 350px;
+    width: 100%; }
+  .maps .form {
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    padding: 0 30px;
+    bottom: -50px;
+    margin-left: 19px;
+    left: 50%; }
+    .maps .form input, .maps .form textarea {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px; }
+    .maps .form textarea {
+      height: 100px; }
+    .maps .form button {
+      border-radius: 30px;
+      padding: 10px 40px;
+      width: auto; }
+    .maps .form h2 {
+      padding: 0 17px;
+      color: #5b5b5b; }
+    .maps .form .form-item {
+      margin-bottom: 20px;
+      padding: 0 17px; }
+
+#contacts .contacts-title {
+  border-bottom: 2px solid #dd4410;
+  padding-bottom: 11px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 2.2em;
+  width: 152px; }
+
+#contacts .contacts-item h4 {
+  color: #fff;
+  margin-bottom: 0;
+  padding-left: 20px; }
+
+#contacts .contacts-item ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 20px;
+  margin-bottom: 0;
+  color: #5b5b5b;
+  margin-top: 7px; }
+  #contacts .contacts-item ul a {
+    color: #5b5b5b;
+    text-decoration: none; }
+  #contacts .contacts-item ul li {
+    font-size: 0.8em; }
+
+#contacts .contacts-item small {
+  color: #5b5b5b;
+  float: left;
+  font-size: 0.8em;
+  display: block;
+  text-align: left;
+  width: 100%; }
+
+.follow h4 {
+  text-align: right;
+  padding-right: 0; }
+
+.follow img#logo-mini {
+  margin: 21px 0 10px 0; }
+
+.icon-footer {
+  position: relative; }
+  .icon-footer:before {
+    content: "";
+    background: url(../img/icons/all-icons.svg) no-repeat;
+    background-size: 100%;
+    background-position: 0px -1px;
+    position: absolute;
+    height: 16px;
+    top: 20px;
+    left: 8px;
+    width: 30px; }
+  .icon-footer.telephone-icon:before {
+    background-position: 0px -108px;
+    position: absolute;
+    height: 11px;
+    top: 2px;
+    left: -4px;
+    width: 30px; }
+  .icon-footer.adress-icon:before {
+    content: "";
+    background: url(../img/icons/all-icons.svg) no-repeat;
+    background-size: 100%;
+    background-position: 0px -131px;
+    position: absolute;
+    height: 12px;
+    top: 23px;
+    left: 8px;
+    width: 32px; }
+
+.row {
+  margin-left: -25px;
+  margin-right: -25px; }

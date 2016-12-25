@@ -29,7 +29,7 @@
             // Close modal 
             var modalWindow = document.querySelector(".modal");
 
-            document.getElementById("play-icon").onclick = function() {
+            $(".play-icon").on('click', function() {
                 var tic = 0;
                 modalWindow.style.opacity = 0;
                 modalWindow.style.display = "block";
@@ -43,7 +43,7 @@
                         clearInterval(time);
                     }
                 }, 50);
-            }
+            });
 
             document.getElementById("close-modal").onclick = function() {
                 var tic = 9;
