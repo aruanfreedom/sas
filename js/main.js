@@ -34,9 +34,8 @@
                 modalWindow.style.opacity = 0;
                 modalWindow.style.display = "block";
                 var time = setInterval(function () {
-                    modalWindow.style.opacity = "0." + tic ;
+                    modalWindow.style.opacity = "0." + tic;
                     tic++;
-                    console.log(tic)
                     if (tic === 10) {
                         modalWindow.style.opacity = 1;
                     
@@ -51,7 +50,6 @@
                 var fadeOut = setInterval(function () {
                     modalWindow.style.opacity = "0." + tic ;
                     tic--;
-                    console.log(tic)
                     if (tic <= 0) {
                         modalWindow.style.opacity = 0;
                         modalWindow.style.display = "none";
@@ -106,6 +104,14 @@
             // Scroll top
             $('.top-page').click(function() {
                $(".main").moveTo(1);
+            });
+
+            // scroll link
+             $('a[href^="#"]').click(function() {
+               var el = $(this).attr('href'),
+                clear = el.replace("#", "");
+               console.log(el)
+                $(".main").moveTo(clear);
             });
          
      }        

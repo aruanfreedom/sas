@@ -333,7 +333,16 @@ nav {
         position: absolute;
         right: 20px;
         top: 20px;
-        
+        &:after {
+            content: "x";
+            font-weight: bold;
+            font-style: normal;
+            position: absolute;
+            font-size: 1.4em;
+            /* border: 2px solid #000; */
+            top: -18px;
+            right: 0;
+        }
         &:hover {
             color: $grey;
         }
@@ -782,16 +791,16 @@ nav {
 }
 
 .top-page {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 10px;
     z-index: 20;
     span {
         position: absolute;
-        top: 12px;
-        color: $grey;
-        font-size: 1.5em;
-        left: -85px;
+        top: 19px;
+        color: #5b5b5b;
+        font-size: 1em;
+        left: -58px;
     }
     a {
         display: block;

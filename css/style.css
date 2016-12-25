@@ -443,6 +443,15 @@ nav {
     position: absolute;
     right: 20px;
     top: 20px; }
+    .modal #close-modal:after {
+      content: "x";
+      font-weight: bold;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.4em;
+      /* border: 2px solid #000; */
+      top: -18px;
+      right: 0; }
     .modal #close-modal:hover {
       color: #5b5b5b; }
   .modal .modal-title h2 {
@@ -792,16 +801,16 @@ nav {
     width: 32px; }
 
 .top-page {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   right: 10px;
   z-index: 20; }
   .top-page span {
     position: absolute;
-    top: 12px;
+    top: 19px;
     color: #5b5b5b;
-    font-size: 1.5em;
-    left: -85px; }
+    font-size: 1em;
+    left: -58px; }
   .top-page a {
     display: block;
     overflow: hidden;
