@@ -781,7 +781,28 @@ nav {
     }
 }
 
-
+.top-page {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 20;
+    span {
+        position: absolute;
+        top: 12px;
+        color: $grey;
+        font-size: 1.5em;
+        left: -85px;
+    }
+    a {
+        display: block;
+        overflow: hidden;
+        height: 60px;
+        width: 60px;
+        img {
+            margin-top: -219px;
+        }
+    }
+}
 
 .row {
     margin-left: -25px;

@@ -102,7 +102,11 @@
             };
 
             clientFunc();
-           
+
+            // Scroll top
+            $('.top-page').click(function() {
+               $(".main").moveTo(1);
+            });
          
      }        
 
