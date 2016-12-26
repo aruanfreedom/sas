@@ -925,9 +925,12 @@ nav {
     }
 }
 
+.vertical-center {
+            max-width: 1920px;
+        margin: 0 auto;
+}
 @include susy-breakpoint($medium-width) {
     .vertical-center {
-        // padding: 50% 0;
         position: relative;
         top: 20%;
     }
