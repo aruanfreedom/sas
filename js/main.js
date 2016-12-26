@@ -44,7 +44,7 @@
                 }, 50);
             });
 
-            document.getElementById("close-modal").onclick = function() {
+            document.getElementById("close-block").onclick = function() {
                 var tic = 9;
                 modalWindow.style.opacity = 1;
                 var fadeOut = setInterval(function () {

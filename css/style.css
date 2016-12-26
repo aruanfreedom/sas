@@ -309,12 +309,6 @@ nav {
       position: absolute;
       top: 0;
       right: 0; } }
-  @media (min-width: 360px) and (max-width: 1280px) {
-    #top-contact .text-left {
-      text-align: right; } }
-  @media (min-width: 360px) and (max-width: 1280px) {
-    #top-contact .left {
-      float: right; } }
   #top-contact #left {
     font-family: "SFUIDisplay-Light"; }
   #top-contact #right {
@@ -449,6 +443,11 @@ nav {
   height: 100%;
   width: 100%;
   z-index: 100; }
+  .modal #close-block {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 101; }
   .modal #close-modal {
     cursor: pointer;
     font-size: 2em;
@@ -469,11 +468,11 @@ nav {
   .modal .modal-title h2 {
     margin-top: 0; }
   .modal .modal-dialog {
-    background: #fff;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
-    position: relative; }
+    position: relative;
+    z-index: 102; }
   .modal .modal-content iframe {
     min-height: 500px;
     height: 100%;
@@ -839,9 +838,11 @@ nav {
   margin-top: 7px; }
   #contacts .contacts-item ul a {
     color: #5b5b5b;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-bottom: 4px; }
   #contacts .contacts-item ul li {
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    margin-bottom: 4px; }
 
 #contacts .contacts-item small {
   color: #5b5b5b;
@@ -912,7 +913,8 @@ nav {
 
 @media (min-width: 360px) and (max-width: 1280px) {
   .vertical-center {
-    padding: 50% 0; } }
+    position: relative;
+    top: 20%; } }
 
 .row {
   margin-left: -25px;

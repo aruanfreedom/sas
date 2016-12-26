@@ -156,16 +156,16 @@ nav {
         top: 0;
         right: 0;
     }
-    .text-left {
-       @include susy-breakpoint($medium-width) {
-            text-align: right;
-        } 
-    }
-    .left {
-        @include susy-breakpoint($medium-width) {
-            float: right;
-        } 
-    }
+    // .text-left {
+    //    @include susy-breakpoint($medium-width) {
+    //         text-align: right;
+    //     } 
+    // }
+    // .left {
+    //     @include susy-breakpoint($medium-width) {
+    //         float: right;
+    //     } 
+    // }
     #left {
         font-family: $light-font;
     }
@@ -342,6 +342,13 @@ nav {
     height: 100%;
     width: 100%;
     z-index: 100;
+    
+    #close-block {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 101;
+    }
 
     #close-modal {
         cursor: pointer;
@@ -371,11 +378,12 @@ nav {
     }
 
     .modal-dialog {
-        background: #fff;
+        // background: #fff;
         border-radius: 5px;
         padding-top: 20px;
         padding-bottom: 20px;
         position: relative;
+        z-index: 102;
     }
 
     .modal-content {
@@ -824,9 +832,11 @@ nav {
             a {
                 color: $grey;
                 text-decoration: none;
+                margin-bottom: 4px;
             }
             li {
                 font-size: 0.8em;
+                margin-bottom: 4px;
             }
         }
         small {
@@ -917,7 +927,9 @@ nav {
 
 @include susy-breakpoint($medium-width) {
     .vertical-center {
-        padding: 50% 0;
+        // padding: 50% 0;
+        position: relative;
+        top: 20%;
     }
 }
 
