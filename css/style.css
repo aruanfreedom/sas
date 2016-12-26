@@ -309,6 +309,12 @@ nav {
       position: absolute;
       top: 0;
       right: 0; } }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    #top-contact .text-left {
+      text-align: right; } }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    #top-contact .left {
+      float: right; } }
   #top-contact #left {
     font-family: "SFUIDisplay-Light"; }
   #top-contact #right {
@@ -340,6 +346,9 @@ nav {
   .icon.icon-play-header {
     height: 65px;
     width: 65px; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .icon.icon-play-header {
+        margin-top: 25px; } }
     .icon.icon-play-header img {
       margin-top: -27px; }
   .icon.icon-play-bottom {
@@ -368,6 +377,9 @@ nav {
   margin-top: 10px; }
   #topic h2 {
     font-size: 2.5em; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      #topic h2 {
+        margin-top: 10px; } }
   #topic span.white-font {
     font-family: "SFUIDisplay-Light"; }
   #topic strong.yellow-font {
@@ -504,6 +516,7 @@ nav {
 .btn {
   background: #5b5b5b;
   border: 1px solid #5b5b5b;
+  cursor: pointer;
   color: #000;
   border-radius: 10px;
   font-weight: bold;
@@ -523,41 +536,65 @@ nav {
   border: 5px solid #fff300;
   border-radius: 50%;
   position: relative;
-  top: 55px;
-  line-height: 340px;
-  height: 355px;
-  width: 355px; }
+  top: 90px;
+  line-height: 252px;
+  height: 255px;
+  width: 255px; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-circle {
+      border-radius: 0;
+      border: 0px solid #fff300;
+      line-height: 0px;
+      top: 0;
+      height: 500px;
+      width: 100%; } }
   .punkts-circle h2 {
     height: 100%;
     text-transform: uppercase;
     color: #fff300;
-    font-size: 4.5em;
+    font-size: 3em;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-circle h2 {
+        position: absolute;
+        left: 0;
+        top: 50%; } }
 
 .punkts-icons.top {
   position: absolute;
   top: 0;
   line-height: 0;
   width: 100%; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-icons.top {
+      top: 13%; } }
   .punkts-icons.top .punkts-theme {
     color: #fff;
     position: absolute;
     font-size: 1.5em;
-    top: -70px;
+    top: -90px;
     left: 0;
     width: 100%; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.top .punkts-theme {
+        top: 0;
+        left: 15%; } }
   .punkts-icons.top strong.icons-name {
     display: block;
     line-height: 0;
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: 132px;
+    left: 33%;
     margin-top: -50px;
     height: 90px;
     width: 90px; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.top strong.icons-name {
+        top: 2%;
+        left: 20%; } }
     .punkts-icons.top strong.icons-name .icon-tehnology {
       background: url(../img/icons/we-icons.svg) center center no-repeat #fff300;
       background-size: 65%;
@@ -570,12 +607,25 @@ nav {
 
 .punkts-icons.left.top {
   right: 10px;
-  top: 120px; }
+  top: 100px; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-icons.left.top {
+      top: 35%;
+      left: 0%;
+      right: auto; } }
   .punkts-icons.left.top .punkts-theme {
-    left: 90%;
+    left: 105%;
     top: 0; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.left.top .punkts-theme {
+        top: 10%;
+        left: 2.6%; } }
   .punkts-icons.left.top strong.icons-name {
     left: 90%; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.left.top strong.icons-name {
+        top: 10%;
+        left: 20%; } }
   .punkts-icons.left.top strong.icons-name .icon-tehnology {
     background-position: 21px -76px; }
 
@@ -583,11 +633,24 @@ nav {
   right: 0;
   top: auto;
   bottom: 0; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-icons.bottom-right.top {
+      top: 57%;
+      left: 0%;
+      right: auto;
+      bottom: auto; } }
   .punkts-icons.bottom-right.top .punkts-theme {
-    left: 65%;
-    top: 0; }
+    left: 80%;
+    top: 68px; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.bottom-right.top .punkts-theme {
+        top: 10%;
+        left: 15%; } }
   .punkts-icons.bottom-right.top strong.icons-name {
     left: 65%; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.bottom-right.top strong.icons-name {
+        left: 20%; } }
   .punkts-icons.bottom-right.top strong.icons-name .icon-tehnology {
     background-position: 16px -330px; }
 
@@ -596,24 +659,49 @@ nav {
   top: auto;
   left: 0;
   bottom: 0; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-icons.bottom-left.top {
+      top: 79%;
+      left: 0%;
+      bottom: auto;
+      right: auto; } }
   .punkts-icons.bottom-left.top .punkts-theme {
     left: -82%;
-    top: 0; }
+    top: 67px;
+    width: 287px; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.bottom-left.top .punkts-theme {
+        top: 0%;
+        left: 17%;
+        width: 100%; } }
   .punkts-icons.bottom-left.top strong.icons-name {
-    left: 10%; }
+    left: 0%; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.bottom-left.top strong.icons-name {
+        left: 20%; } }
   .punkts-icons.bottom-left.top strong.icons-name .icon-tehnology {
     background-position: 16px -247px; }
 
 .punkts-icons.top-left.top {
   right: auto;
-  top: 120px;
+  top: 100px;
   left: -20%;
   bottom: auto; }
+  @media (min-width: 360px) and (max-width: 1280px) {
+    .punkts-icons.top-left.top {
+      left: 0%;
+      top: 100%; } }
   .punkts-icons.top-left.top .punkts-theme {
-    left: -82%;
+    left: -100%;
     top: 0; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.top-left.top .punkts-theme {
+        left: 13%; } }
   .punkts-icons.top-left.top strong.icons-name {
-    left: 10%; }
+    left: 0%; }
+    @media (min-width: 360px) and (max-width: 1280px) {
+      .punkts-icons.top-left.top strong.icons-name {
+        left: 20%; } }
   .punkts-icons.top-left.top strong.icons-name .icon-tehnology {
     background-position: 16px -167px; }
 
@@ -789,6 +877,9 @@ nav {
     top: 2px;
     left: -4px;
     width: 30px; }
+  .icon-footer.telephone-icon a {
+    display: block;
+    width: 100%; }
   .icon-footer.adress-icon:before {
     content: "";
     background: url(../img/icons/all-icons.svg) no-repeat;
@@ -818,6 +909,10 @@ nav {
     width: 60px; }
     .top-page a img {
       margin-top: -219px; }
+
+@media (min-width: 360px) and (max-width: 1280px) {
+  .vertical-center {
+    padding: 50% 0; } }
 
 .row {
   margin-left: -25px;

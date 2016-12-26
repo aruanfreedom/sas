@@ -156,6 +156,16 @@ nav {
         top: 0;
         right: 0;
     }
+    .text-left {
+       @include susy-breakpoint($medium-width) {
+            text-align: right;
+        } 
+    }
+    .left {
+        @include susy-breakpoint($medium-width) {
+            float: right;
+        } 
+    }
     #left {
         font-family: $light-font;
     }
@@ -195,6 +205,9 @@ nav {
     &.icon-play-header {
         height: 65px;
         width: 65px; 
+        @include susy-breakpoint($medium-width) {
+            margin-top: 25px;
+        } 
         img {
             margin-top: -27px;
         }
@@ -231,6 +244,9 @@ nav {
     margin-top: 10px;
     h2 {
         font-size: 2.5em;
+        @include susy-breakpoint($medium-width) {
+            margin-top: 10px;
+        } 
     }
     span {
         &.white-font {
@@ -416,6 +432,7 @@ nav {
 .btn {
     background: $grey;
     border: 1px solid $grey;
+    cursor: pointer;
     color: #000;
     border-radius: 10px;
     font-weight: bold;
@@ -432,24 +449,42 @@ nav {
 
 #we-jobs {
     background: $block-gray;
+    // .name-block {
+    //     @include susy-breakpoint($medium-width) {
+    //         margin-bottom: 0;
+    //     }
+    // }
 }
 
 .punkts-circle {
     border: 5px solid #fff300;
     border-radius: 50%;
     position: relative;
-    top: 55px;
-    line-height: 340px;
-    height: 355px;
-    width: 355px;
+    top: 90px;
+    line-height: 252px;
+    height: 255px;
+    width: 255px;
+    @include susy-breakpoint($medium-width) {
+        border-radius: 0;
+        border: 0px solid #fff300;
+        line-height: 0px;
+        top: 0;
+        height: 500px;
+        width: 100%;
+    } 
         h2 {
             height: 100%;
             text-transform: uppercase;
             color: #fff300;
-            font-size: 4.5em;
+            font-size: 3em;
             font-weight: bold;
             margin-top: 0px;
             margin-bottom: 0px;
+            @include susy-breakpoint($medium-width) {
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
         }
 }
 
@@ -459,13 +494,20 @@ nav {
         top: 0;
         line-height: 0;
         width: 100%;
+        @include susy-breakpoint($medium-width) {
+            top: 13%;
+        } 
         .punkts-theme {
             color: #fff;
             position: absolute;
             font-size: 1.5em;
-            top: -70px;
+            top: -90px;
             left: 0;
             width: 100%;
+            @include susy-breakpoint($medium-width) {
+               top: 0;
+               left: 15%;
+            } 
         }
         strong.icons-name {
             display: block;
@@ -473,10 +515,14 @@ nav {
             overflow: hidden;
             position: absolute;
             top: 0;
-            left: 132px;
+            left: 33%;
             margin-top: -50px;
             height: 90px;
             width: 90px;
+            @include susy-breakpoint($medium-width) {
+               top: 2%;
+               left: 20%;
+            } 
             .icon-tehnology {
                 background: url(../img/icons/we-icons.svg) center center no-repeat #fff300;
                 background-size: 65%;
@@ -491,13 +537,26 @@ nav {
     }
     &.left.top {
         right: 10px;
-        top: 120px;
+        top: 100px;
+        @include susy-breakpoint($medium-width) {
+            top: 35%;
+            left: 0%;
+            right: auto;
+        } 
         .punkts-theme {
-            left: 90%;
+            left: 105%;
             top: 0;
+            @include susy-breakpoint($medium-width) {
+                top: 10%;
+                left: 2.6%;
+            } 
         }
         strong.icons-name {
             left: 90%;
+            @include susy-breakpoint($medium-width) {
+                top: 10%;
+                left: 20%;
+            } 
         }
         strong.icons-name .icon-tehnology {
             background-position: 21px -76px;
@@ -507,12 +566,25 @@ nav {
         right: 0;
         top: auto;
         bottom: 0;
+        @include susy-breakpoint($medium-width) {
+            top: 57%;
+            left: 0%;
+            right: auto;
+            bottom: auto;
+        } 
         .punkts-theme {
-            left: 65%;
-            top: 0;
+            left: 80%;
+            top: 68px;
+            @include susy-breakpoint($medium-width) {
+                top: 10%;
+                left: 15%;
+            } 
         }
         strong.icons-name {
             left: 65%;
+             @include susy-breakpoint($medium-width) {
+                left: 20%;
+            } 
         }
         strong.icons-name {
             .icon-tehnology {
@@ -525,12 +597,27 @@ nav {
         top: auto;
         left: 0;    
         bottom: 0;
+         @include susy-breakpoint($medium-width) {
+            top: 79%;
+            left: 0%;
+            bottom: auto;
+            right: auto;
+        } 
         .punkts-theme {
             left: -82%;
-            top: 0;
+            top: 67px;
+            width: 287px;
+            @include susy-breakpoint($medium-width) {
+                top: 0%;
+                left: 17%;
+                width: 100%;
+            }
         }
         strong.icons-name {
-            left: 10%;
+            left: 0%;
+            @include susy-breakpoint($medium-width) {
+                left: 20%;
+            }
         }
         strong.icons-name {
             .icon-tehnology {
@@ -540,15 +627,26 @@ nav {
     }
     &.top-left.top {
         right: auto;
-        top: 120px;
+        top: 100px;
         left: -20%;
         bottom: auto;
-        .punkts-theme {
-            left: -82%;
-            top: 0;
+        @include susy-breakpoint($medium-width) {
+            left: 0%;
+            top: 100%;
         }
+        .punkts-theme {
+            left: -100%;
+            top: 0;
+            @include susy-breakpoint($medium-width) {
+                left: 13%;
+            }
+        }
+        
         strong.icons-name {
-            left: 10%;
+            left: 0%;
+            @include susy-breakpoint($medium-width) {
+                left: 20%;
+            }
         }
         strong.icons-name {
             .icon-tehnology {
@@ -772,8 +870,12 @@ nav {
             height: 11px;
             top: 2px;
             left: -4px;
-            width: 30px;
+            width: 30px;            
         }
+        a {
+                display: block;
+                width: 100%;
+            }
     }
     &.adress-icon {
         &:before {
@@ -810,6 +912,12 @@ nav {
         img {
             margin-top: -219px;
         }
+    }
+}
+
+@include susy-breakpoint($medium-width) {
+    .vertical-center {
+        padding: 50% 0;
     }
 }
 

@@ -110,9 +110,65 @@
              $('nav a[href^="#"]').click(function() {
                var el = $(this).attr('href'),
                 clear = el.replace("#", "");
-               console.log(el)
                 $(".main").moveTo(clear);
             });
+
+            // Bell bottom scroll
+
+            $('.service-block-item .btn').on('click', function() {
+                $(".main").moveTo(7);
+            });
+
+
+            // Mulanur Scripts for form
+
+            var argObj = {
+
+                sendButtonForm: "sendform",
+                name: "name",
+                email: "email",
+                message: "message",
+                addressForSend: "/feedbackform"
+
+
+            };
+
+
+
+function sendFormData(argObj) {
+
+
+    var sendButtonForm = document.getElementById(argObj.sendButtonForm);
+
+    sendButtonForm.addEventListener("click", function () {
+
+        var ObjForForm = {};
+
+
+        ObjForForm = {
+
+            name: document.getElementById(argObj.name).value,
+            email: document.getElementById(argObj.email).value,
+            message: document.getElementById(argObj.message).value
+
+
+        };
+
+
+        var xhr = new XMLHttpRequest();
+        var json_upload = "json_name=" + JSON.stringify(ObjForForm);
+
+        xhr.open("POST", argObj.addressForSend, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(json_upload);
+
+
+    });
+
+
+
+
+}
          
      }        
 
