@@ -26,7 +26,8 @@ $thin-font: "SFUIDisplay-Thin";
 $semibold-font: "SFUIDisplay-Semibold";
 
 // display width
-$medium-width: 360px 1280px;
+$medium-width: 220px 1040px;
+$medium-width-lg: 1040px 1280px;
 // $small-width: 360px 960px;
 
 // Settings Sussy library
@@ -69,10 +70,10 @@ $grid-columns: 12;
 body {
     position: relative;
     font-family: $regular-font;
-}
-
-#main {
-    min-width: 360px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #home{
@@ -82,8 +83,15 @@ body {
 
 #logo {
     padding-top: 90px;
+
     @include susy-breakpoint($medium-width) {
-        padding-top: 30px;
+        padding-top: 150px;
+    }
+
+    @include susy-breakpoint($medium-width) {
+        img {
+            width: 22%;
+        }
     }
     h1 {
         color: $yellow;
@@ -101,10 +109,30 @@ body {
 .home-bg {
     background: $black-opacity-9;
     height: 100%;
+    @include susy-breakpoint($medium-width) {
+        display: table;
+        width: 100%;
+    }
 }
 
 #home-content{
     @include span(12);
+    @include susy-breakpoint($medium-width) {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+
+    #nav-menu {
+        @include susy-breakpoint($medium-width-lg) {
+            min-width: 700px;
+            position: relative;
+            top: 80px;
+        }
+        @include susy-breakpoint($medium-width) {
+            display: none;
+        }
+    }
 }
 
 .center {
@@ -149,7 +177,7 @@ nav {
         font-family: $thin-font;
         padding: 0 9px;
         
-        &.active {
+        &.active, &:hover {
             color: $white;
         }
     }
@@ -160,7 +188,12 @@ nav {
     padding-top: 45px;
     @include susy-breakpoint($medium-width) {
         position: absolute;
-        top: 0;
+        right: 0;
+        width: auto;
+    }
+    @include susy-breakpoint($medium-width-lg) {
+        min-width: 300px;
+        position: absolute;
         right: 0;
     }
     // .text-left {
@@ -325,6 +358,9 @@ nav {
     left: 0;
     text-align: center;
     width: 100%;
+    @include susy-breakpoint($medium-width) {
+        display: none;
+    }
 
     small {
         color: $grey;
@@ -350,7 +386,7 @@ nav {
     width: 100%;
     z-index: 100;
     
-    #close-block {
+    #close-block, #close-block-img {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -406,7 +442,7 @@ nav {
     background: url("../img/two-page-bg.jpg") no-repeat left center $block-gray;
     background-size: 100%;
     h2 {
-        margin-bottom: 80px;
+        margin-bottom: 35px;
     }
 }
 
@@ -414,6 +450,17 @@ nav {
     color: $yellow;
     font-size: 2.5em;
     margin: 3% 0 5% 0;
+}
+
+#OpenLayers_Control_Attribution_7 {
+    bottom: 0;
+    right: 0;
+}
+
+.service-block-sm {
+    @include susy-breakpoint($medium-width) {
+        margin-bottom: 20px;
+    }
 }
 
 .service-block-item {
@@ -429,7 +476,7 @@ nav {
     ul {
         margin: 15px 0 55px 0;
         list-style: url('../img/icons/check.png');
-        height: 235px;
+        height: 265px;
         li {
             color: $yellow;
             margin: 10px 0;
@@ -441,6 +488,12 @@ nav {
         left: 25px;
         bottom: 16px;
         width: 80%;
+        @include susy-breakpoint($medium-width) {
+            position: relative;
+            left: auto;
+            bottom: 16px;
+            width: 150px;
+        }
     }
 }
 
@@ -726,6 +779,9 @@ nav {
     position: relative;
     overflow: hidden;
     height: 284px;
+    @include susy-breakpoint($medium-width) {
+        height: 850px;
+    }
 }
 
 #clieants-block {
@@ -776,11 +832,21 @@ nav {
     background: $block-gray;
 }
 
+#maps-img {
+    z-index: 999;
+}
+
 .maps {
     position: relative;
-    iframe {
+    @include susy-breakpoint($medium-width) {
+        height: 44%;
+    }
+    iframe, #OSMap {
         height: 350px;
         width: 100%;
+        @include susy-breakpoint($medium-width) {
+            height: 100%;
+        }
     }
     .form {
         background: #fff;
@@ -790,6 +856,7 @@ nav {
         bottom: -50px;
         margin-left: 19px;
         left: 50%;
+        z-index: 1005;
         input, textarea {
             border: 1px solid $input-gray;
             border-radius: 4px;
@@ -932,18 +999,63 @@ nav {
     }
 }
 
-.vertical-center {
-            max-width: 1920px;
-        margin: 0 auto;
+.custom-big-3 {
+    padding-left: 0.8%;
+    padding-right: 0.8%;
 }
-@include susy-breakpoint($medium-width) {
-    .vertical-center {
-        position: relative;
-        top: 20%;
+
+.vertical-center {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-item {
+    @include susy-breakpoint($medium-width){
+        display: table-cell;
+        vertical-align: middle;
     }
+
 }
 
 .row {
     margin-left: -25px;
     margin-right: -25px;
+}
+
+// 404 page
+#not-page {
+    background: url("../img/bg-light.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    h2 {
+        margin: 0;
+    }
+}
+
+#block-not-page {
+    width: 100%;
+    h2 {
+        margin-top: 20px;
+    }
+    h3 {
+        font-family: $light-font;
+        color: #fff;
+        margin: 0;
+    }
+    .btn {
+        position: fixed;
+        bottom: 20px;
+        text-decoration: none;
+        font-family: $medium-font;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        margin-left: -85px;
+        width: auto;
+    }
 }

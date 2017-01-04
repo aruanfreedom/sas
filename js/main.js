@@ -119,6 +119,51 @@
                 $(".main").moveTo(7);
             });
 
+            // Open cart
+             function MapsOp() {
+                 map = new OpenLayers.Map("OSMap");
+                 map.addLayer(new OpenLayers.Layer.OSM());
+
+                 var lonLat = new OpenLayers.LonLat( 71.41675, 51.19170 )
+                     .transform(
+                         new OpenLayers.Projection("EPSG:4326"), // переобразование в WGS 1984
+                         new OpenLayers.Projection("EPSG:900913")
+                     );
+
+                 var zoom=18;
+
+                 var markers = new OpenLayers.Layer.Markers( "Markers" );
+                 map.addLayer(markers);
+                 var size = new OpenLayers.Size(35, 45);//размер картинки для маркера
+                 var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h); //смещение картинки для маркера
+                 var icon = new OpenLayers.Icon('/img/logo.png', size, offset);
+                 markers.addMarker(new OpenLayers.Marker({lat:6655270,lon:7950068}, icon));
+
+                 map.events.register('click', map, function (e) {
+                     // Open modal
+                     $("#maps-img").css("display", "block").animate( {opacity: 1}, 500);
+                 }); //добавление событие клика по карте
+
+                 map.setCenter (lonLat, zoom);
+
+                 // CLose modal
+                 $("#close-block-img").on("click", function() {
+                     $("#maps-img").hide();
+                 });
+
+             }
+
+             MapsOp();
+
+         $('.maps').on("click", function(){
+             console.log(this);
+             $(this).find("iframe").contents().find("body").on('click', function(event) { alert('test'); });
+         });
+
+            $(".leaflet-marker-icon").on("click", function() {
+               alert("ds")
+            });
+
 
             // Mulanur Scripts for form
 

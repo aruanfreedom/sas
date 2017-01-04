@@ -43,7 +43,9 @@
 <body>
     <div class="modal">
         <div id="close-block"></div>
-        <div class="col-big-6 col-sml-10 center modal-dialog vertical-center">
+        <div class="vertical-center">
+        <div class="vertical-center-item">
+        <div class="col-big-6 col-sml-10 center modal-dialog">
             <!--<div class="modal-title">
                 <h2 class="left">Видео</h2>
                 <i id='close-modal' class="fa fa-times right"></i>
@@ -52,11 +54,24 @@
                 <iframe src="https://www.youtube.com/embed/IxGvm6btP1A" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
+        </div>
+        </div>
+    </div>
+    <div id="maps-img" class="modal">
+        <div id="close-block-img"></div>
+        <div class="vertical-center">
+            <div class="vertical-center-item">
+        <div class="col-big-6 col-sml-10 center modal-dialog">
+            <div class="modal-content">
+                <img src="img/maps-img.jpg" class="w100" alt="sas maps image">
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
     <div id="main">
         <section id="home">
             <div class="home-bg">
-            <div class="vertical-center">
                 <div id="home-content" class="center">
                     <div id="logo" class="col-big-2 col-sml-12 text-center">
                         <a href="#home">
@@ -66,7 +81,7 @@
                             <a href="#home">Консорциум Безопасности</a>
                         </h1>
                     </div>
-                    <div class="col-big-7 col-sml-12 text-center">
+                    <div id="nav-menu" class="col-big-7 col-sml-12 text-center">
                         <nav>
                             <a href="#1" class="active">Главная</a>
                             <a href="#2">Наши услуги</a>
@@ -116,65 +131,82 @@
                     </ul>
                 </div>
             </div>
-            </div>
         </section>
         <section id="services">
             <div class="vertical-center">
-            <div class="col-big-12 text-center">
-                <h2 class="name-block">Наши услуги</h2>
-            </div>
-            <div id="service-block" class="col-big-8 col-sml-11 center">
-                <div class="col-big-4 text-center">
-                    <div class="service-block-item">
-                        <h2>Охрана</h2>
-                        <h3>Помещений</h3>
-                        <ul class="text-left">
-                            <li>Офисы</li>
-                            <li>Торговые Центры</li>
-                            <li>Склады</li>
-                            <li>Паркинг</li>
-                            <li>Строительные объекты</li>
-                            <li>Жилые комплексы</li>
-                            <li>Социальные объекты</li>
-                            <li>Промышленные объекты</li>
-                            <li>Коттеджные посёлки</li>
-                            <li>Любой ваш объект</li>
-                        </ul>
-                        <button class="btn btn-yellow">Заказать</button>
-                    </div>
+                <div class="vertical-item">
+                <div class="vertical-center-item">
+                <div class="col-big-12 text-center">
+                    <h2 class="name-block">Наши услуги</h2>
                 </div>
-                <div class="col-big-4 text-center">
-                    <div class="service-block-item">
-                        <h2>Охрана</h2>
-                        <h3>Мероприятий</h3>
-                         <ul class="text-left">
-                            <li>Выставки</li>
-                            <li>Концерты</li>
-                            <li>Спортивные соревнования</li>
-                            <li>Корпоративные вечеринки</li>
-                            <li>Конференции</li>
-                            <li>Любое ваше мероприятие</li>
-                        </ul>
-                        <button class="btn btn-yellow">Заказать</button>
-                    </div>
-                </div>
-                <div class="col-big-4 text-center">
-                    <div class="service-block-item">
-                        <h2>Охрана</h2>
-                        <h3>VIP - Персон</h3>
+                <div id="service-block" class="col-big-8 col-sml-11 center">
+                    <div class="col-big-3 service-block-sm col-sml-6 custom-big-3 text-center">
+                        <div class="service-block-item">
+                            <h3>Охрана</h3>
+                            <h3>Помещений</h3>
                             <ul class="text-left">
-                                <li>Постоянная охрана по всей территори РК</li>
-                                <li>Временная охрана</li>
-                                <li>Персональная охрана под любые ваши запросы</li>
+                                <li>Офисы</li>
+                                <li>Торговые Центры</li>
+                                <li>Склады</li>
+                                <li>Паркинг</li>
+                                <li>Строительные объекты</li>
+                                <li>Жилые комплексы</li>
+                                <li>Социальные объекты</li>
+                                <li>Промышленные объекты</li>
+                                <li>Коттеджные посёлки</li>
+                                <li>Любой ваш объект</li>
                             </ul>
-                        <button class="btn btn-yellow">Заказать</button>
+                            <button class="btn btn-yellow">Заказать</button>
+                        </div>
                     </div>
-                </div>                
-            </div>
+                    <div class="col-big-3 service-block-sm col-sml-6 custom-big-3 text-center">
+                        <div class="service-block-item">
+                            <h3>Охрана</h3>
+                            <h3>Мероприятий</h3>
+                             <ul class="text-left">
+                                <li>Выставки</li>
+                                <li>Концерты</li>
+                                <li>Спортивные соревнования</li>
+                                <li>Корпоративные вечеринки</li>
+                                <li>Конференции</li>
+                                <li>Любое ваше мероприятие</li>
+                            </ul>
+                            <button class="btn btn-yellow">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="col-big-3 service-block-sm col-sml-6 custom-big-3 text-center">
+                        <div class="service-block-item">
+                            <h3>Охрана</h3>
+                            <h3>VIP - Персон</h3>
+                                <ul class="text-left">
+                                    <li>Постоянная охрана по всей территори РК</li>
+                                    <li>Временная охрана</li>
+                                    <li>Персональная охрана под любые ваши запросы</li>
+                                </ul>
+                            <button class="btn btn-yellow">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="col-big-3 service-block-sm col-sml-6 custom-big-3 text-center">
+                        <div class="service-block-item">
+                            <h3>Система</h3>
+                            <h3>Безопасности</h3>
+                            <ul class="text-left">
+                                <li>Видео камеры</li>
+                                <li>Датчики охранной и пожарной безопасности</li>
+                                <li>Датчики движения</li>
+                                <li>Выезд ГБР, группа быстрого реагирования</li>
+                            </ul>
+                            <button class="btn btn-yellow">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
         </section>    
          <section id="we-jobs">
              <div class="vertical-center">
+                 <div class="vertical-item">
             <div class="col-big-12 text-center">
                 <h2 class="name-block">Как мы работаем</h2>
             </div>
@@ -215,17 +247,19 @@
                             </div>
                         </div>
                     </div>
-            </div> 
-            </div> 
+                </div>
+            </div>
+             </div>
         </section>  
         <section id="clients">
             <div class="vertical-center">
+                <div class="vertical-item">
             <div class="col-big-12 text-center">
                 <h2 class="name-block white-font">Наши клиенты</h2>
             </div>
             <div id="clieants-block" class="col-big-10 center">
                 <div class="clients-visible col-big-12">
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p> Выражаю Вам глубокую благодарность и признательность за сотрудничество, и личный вклад в развитие индустрии безопасности.</p>
                             <small>- John Reese</small>
@@ -234,7 +268,7 @@
                             <img src="img/person/person1.png" alt="person1">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>За большой вклад в работу по обеспечению общественного порядка и общественной безопасности.</p>
                             <small>- Harold Finch</small>
@@ -243,7 +277,7 @@
                             <img src="img/person/person2.png" alt="person2">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -252,7 +286,7 @@
                             <img src="img/person/person3.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -261,7 +295,7 @@
                             <img src="img/person/person2.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -270,7 +304,7 @@
                             <img src="img/person/person2.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -279,7 +313,7 @@
                             <img src="img/person/person2.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -288,7 +322,7 @@
                             <img src="img/person/person3.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -297,7 +331,7 @@
                             <img src="img/person/person3.png" alt="person3">
                         </div>
                     </div>
-                    <div class="col-big-4 item">
+                    <div class="col-big-4 col-sml-12 item">
                         <div class="client-item">
                             <p>Это организация, которая уделяет внимание каждому клиенту.</p>
                             <small>- Caroline Turing</small>
@@ -310,9 +344,11 @@
                 <div class="text-center dynamic-add-link"></div>
             </div>
             </div>
+            </div>
         </section>  
         <section id="about">
              <div class="vertical-center">
+                 <div class="vertical-item">
             <div class="col-big-12 text-center">
                 <h2 class="name-block white-font">О нас</h2>                
             </div>
@@ -323,9 +359,11 @@
                 <img src="img/world-maps.png" class="w100" alt="world maps sas">
             </div>
             </div>
+             </div>
         </section>  
         <section id="consorcium">
             <div class="vertical-center">
+                <div class="vertical-item">
             <div class="col-big-12 text-center">
                 <h2 class="name-block">Члены консорциума</h2>                
             </div>
@@ -343,12 +381,14 @@
                     <p class="white-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, placeat?</p>
                 </div>
             </div>    
-            </div>    
+            </div>
+            </div>
         </section>  
         <section class="footer">
             <div class="vertical-center">
             <div class="maps">
-                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=71.413831114769%2C51.19073498125056%2C71.41935646533967%2C51.192540361782534&amp;layer=mapnik&amp;marker=51.191637680358085%2C71.41659379005432"></iframe>
+                <div id="OSMap"></div>
+                <!--<iframe name="mapImg" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=71.413831114769%2C51.19073498125056%2C71.41935646533967%2C51.192540361782534&amp;layer=mapnik&amp;marker=51.191637680358085%2C71.41659379005432"></iframe>-->
                 <div class="form col-big-4">
                     <h2>Заказать Услугу</h2>
                     <form action="#">
@@ -441,8 +481,9 @@
     </div>
 
 <!-- Scripts start -->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.onepage-scroll.min.js"></script>
+<script src="js/openlayers.js"></script>
 <script src="js/main.js"></script>
 <!-- Scripts end -->
 </body>
