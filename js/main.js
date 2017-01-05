@@ -134,14 +134,22 @@
 
                  var markers = new OpenLayers.Layer.Markers( "Markers" );
                  map.addLayer(markers);
-                 var size = new OpenLayers.Size(35, 45);//размер картинки для маркера
+                 var size = new OpenLayers.Size(30, 45);//размер картинки для маркера
                  var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h); //смещение картинки для маркера
                  var icon = new OpenLayers.Icon('/img/logo.png', size, offset);
                  markers.addMarker(new OpenLayers.Marker({lat:6655270,lon:7950068}, icon));
 
-                 map.events.register('click', map, function (e) {
+                 markers.events.register('click', map, function (e) {
+                     console.log("sad")
                      // Open modal
-                     $("#maps-img").css("display", "block").animate( {opacity: 1}, 500);
+                     // $("#maps-img").css("display", "block").animate( {opacity: 1}, 500);
+                     popup = new OpenLayers.Popup("chicken",
+                         new OpenLayers.LonLat({lat:6655270,lon:7950068}),
+                         new OpenLayers.Size(200,200),
+                         "example popup",
+                         true);
+
+                     map.addPopup(popup);
                  }); //добавление событие клика по карте
 
                  map.setCenter (lonLat, zoom);
@@ -153,16 +161,79 @@
 
              }
 
-             MapsOp();
+             //MapsOp();
+        function maps() {
+            var map = new ol.Map({
+                target: 'map',
+                renderer: 'canvas',
+                layers: [
+                    new ol.layer.Tile({source: new ol.source.OSM()})
+                ],
+                view: new ol.View({
+                    //projection: 'EPSG:900913',
+                    center: ol.proj.transform([71.41800, 51.19180], 'EPSG:4326', 'EPSG:3857'),
+                    zoom: 18
+                })
 
-         $('.maps').on("click", function(){
-             console.log(this);
-             $(this).find("iframe").contents().find("body").on('click', function(event) { alert('test'); });
-         });
-
-            $(".leaflet-marker-icon").on("click", function() {
-               alert("ds")
             });
+
+            var iconStyle = [
+                new ol.style.Style({
+                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: '/img/logo-mini.png'
+                    }))
+                })
+            ];
+
+            function createMarker(location, style){
+                var iconFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(location)
+                });
+                iconFeature.setStyle(style);
+
+                return iconFeature
+            }
+            var mapVectorSource = new ol.source.Vector({
+                features: []
+            });
+            var mapVectorLayer = new ol.layer.Vector({
+                source: mapVectorSource
+            });
+            map.addLayer(mapVectorLayer);
+
+            function makeMovable(feature) {
+                var modify = new ol.interaction.Modify({
+                    features: new ol.Collection([feature])
+                });
+
+                feature.on('change',function() {
+                    console.log('Feature Moved To:' + this.getGeometry().getCoordinates());
+                }, feature);
+                return modify;
+            }
+
+            var marker = createMarker(ol.proj.transform([71.41655, 51.19170], 'EPSG:4326', 'EPSG:3857'), iconStyle);
+            mapVectorSource.addFeature(marker);
+            var modifyInteraction = makeMovable(marker);
+            map.addInteraction(modifyInteraction);
+
+            map.on('click', function() {
+                $(".ol-popup-custom").show();
+                $("#close-popup").show();
+            });
+
+            $(".ol-popup-custom-closer, #close-popup").on('click', function() {
+                $(".ol-popup-custom").hide();
+                $("#close-popup").hide();
+            });
+
+
+        }
+
+         maps();
 
 
             // Mulanur Scripts for form

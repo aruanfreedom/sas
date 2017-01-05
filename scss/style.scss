@@ -102,6 +102,7 @@ body {
         a {
             text-decoration: none;
             color: $yellow;
+            text-transform: uppercase;
         }
     }
 }
@@ -188,6 +189,7 @@ nav {
     padding-top: 45px;
     @include susy-breakpoint($medium-width) {
         position: absolute;
+        top: 0;
         right: 0;
         width: auto;
     }
@@ -455,6 +457,7 @@ nav {
 #OpenLayers_Control_Attribution_7 {
     bottom: 0;
     right: 0;
+    font-size: 0.8em;
 }
 
 .service-block-sm {
@@ -841,7 +844,7 @@ nav {
     @include susy-breakpoint($medium-width) {
         height: 44%;
     }
-    iframe, #OSMap {
+    iframe, #OSMap, #map {
         height: 350px;
         width: 100%;
         @include susy-breakpoint($medium-width) {
@@ -909,7 +912,7 @@ nav {
                 margin-bottom: 4px;
             }
             li {
-                font-size: 0.8em;
+                font-size: 0.6em;
                 margin-bottom: 4px;
             }
         }
@@ -932,6 +935,69 @@ nav {
     img#logo-mini {
         margin: 21px 0 10px 0;
     }
+}
+
+// OPenCart
+
+.ol-popup-custom {
+    display: none;
+    position: absolute;
+    background-color: white;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 43%;
+    left: 50%;
+    margin-left: -312px;
+    min-width: 280px;
+    z-index: 2;
+}
+
+#popup-custom-content {
+    img {
+        max-width: 200px;
+    }
+}
+
+.ol-popup-custom:after, .ol-popup-custom:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.ol-popup-custom:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+.ol-popup-custom:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+#close-popup {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.ol-popup-custom-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 4;
+}
+.ol-popup-custom-closer:after {
+    content: "✖";
 }
 
 .icon-footer {

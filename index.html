@@ -37,6 +37,7 @@
     <!-- End open graph -->
     <!--<link rel="stylesheet" href="css/fonts/SFUIDisplay/stylesheet.css">-->
     <link rel="stylesheet" href="css/one-page-scroll.css">
+    <link rel="stylesheet" href="css/openlayer.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Sas - security</title>
 </head>
@@ -387,7 +388,15 @@
         <section class="footer">
             <div class="vertical-center">
             <div class="maps">
-                <div id="OSMap"></div>
+                <div id="close-popup"></div>
+                <div id="popup-custom" class="ol-popup-custom text-center">
+                    <a href="#" id="popup-custom-closer" class="ol-popup-custom-closer"></a>
+                    <div id="popup-custom-content">
+                        <img src="img/maps-img.jpg" alt="maps"><br>
+                        <small>Sas</small>
+                    </div>
+                </div>
+                <div id="map" class="map"></div>
                 <!--<iframe name="mapImg" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=71.413831114769%2C51.19073498125056%2C71.41935646533967%2C51.192540361782534&amp;layer=mapnik&amp;marker=51.191637680358085%2C71.41659379005432"></iframe>-->
                 <div class="form col-big-4">
                     <h2>Заказать Услугу</h2>
@@ -406,7 +415,7 @@
                         </div>
                     </form>
                 </div>
-                
+
             </div>
             <div id="contacts" class="col-big-10 center">
                 <div class="col-big-12">
