@@ -28,6 +28,7 @@ $semibold-font: "SFUIDisplay-Semibold";
 // display width
 $medium-width: 220px 1040px;
 $medium-width-lg: 1040px 1280px;
+$large-width-lg: 1366px 1920px;
 // $small-width: 360px 960px;
 
 // Settings Sussy library
@@ -88,6 +89,11 @@ body {
         padding-top: 150px;
     }
 
+    @include susy-breakpoint($large-width-lg) {
+        img {
+            width: 100%;
+        }
+    }
     @include susy-breakpoint($medium-width) {
         img {
             width: 22%;
@@ -99,6 +105,9 @@ body {
         font-size: 1em;
         margin: 35px auto 0 auto;
         width: 150px;
+        @include susy-breakpoint($large-width-lg) {
+            font-size: 1.2em;
+        }
         a {
             text-decoration: none;
             color: $yellow;
@@ -912,7 +921,10 @@ nav {
                 margin-bottom: 4px;
             }
             li {
-                font-size: 0.6em;
+                font-size: 0.95em;
+                @include susy-breakpoint($medium-width) {
+                    font-size: 0.6em;
+                }
                 margin-bottom: 4px;
             }
         }
@@ -1123,5 +1135,11 @@ nav {
         text-transform: uppercase;
         margin-left: -85px;
         width: auto;
+    }
+}
+
+#copyright {
+    a {
+        color: #fff;
     }
 }

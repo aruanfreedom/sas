@@ -171,7 +171,7 @@
                 ],
                 view: new ol.View({
                     //projection: 'EPSG:900913',
-                    center: ol.proj.transform([71.41800, 51.19180], 'EPSG:4326', 'EPSG:3857'),
+                    center: ol.proj.transform([71.41840, 51.19172], 'EPSG:4326', 'EPSG:3857'),
                     zoom: 18
                 })
 
