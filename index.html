@@ -98,10 +98,10 @@
                             <!--<span class="white-font">Отдел продаж: </span>-->
                             <!--<span>Дежурная часть:</span>-->
                         <!--</div>-->
-                        <div id="right" class="text-right left">
-                            <!--<span><a href="tel:87172487830" class="white-font">8 (7172) 48-78-30</a></span>-->
-                            <!--<span><a href="tel:87172487835">8 (7172) 48-78-35</a></span>-->
-                            <span><a href="tel:87172487836" class="white-font"> 8 (7172) 48-78-36</a></span>
+                        <div id="right" class="text-right">
+                            <span><a href="tel:87172487830" class="white-font">8 (7172) 48-78-30</a></span>
+                            <span><a href="tel:87172487835">8 (7172) 48-78-35</a></span>
+                            <span><a href="tel:87172487836"> 8 (7172) 48-78-36</a></span>
                             <div id="lang">
                                 <a href="#rus" class="active">Рус</a>
                                 <a href="#kaz">Каз</a>
@@ -389,15 +389,17 @@
         <section class="footer">
             <div class="vertical-center">
             <div class="maps">
-                <div id="close-popup"></div>
-                <div id="popup-custom" class="ol-popup-custom text-center">
-                    <a href="#" id="popup-custom-closer" class="ol-popup-custom-closer"></a>
-                    <div id="popup-custom-content">
-                        <img src="img/maps-img.jpg" alt="maps">
+                <div id="map" class="map"></div>
+                <span class="overlay" id="logo-maps"><img src="img/logo-mini.png"
+                                                                                                               alt="logo-maps"></span>
+                <div id="marker" title="Marker"></div>
+                <!-- Popup -->
+                <div id="popup" class="ol-popup unvisible">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content">
+                        <img src="img/maps-img.jpg" alt="maps-img">
                     </div>
                 </div>
-                <div id="map" class="map"></div>
-                <!--<iframe name="mapImg" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=71.413831114769%2C51.19073498125056%2C71.41935646533967%2C51.192540361782534&amp;layer=mapnik&amp;marker=51.191637680358085%2C71.41659379005432"></iframe>-->
                 <div class="form col-big-4">
                     <h2>Заказать Услугу</h2>
                     <form action="#">
@@ -455,7 +457,9 @@
                                     <li>Главная</li>
                                     <li>Наши услуги</li>
                                     <li>Как мы работаем</li>
-                                    <li>Наши клиентыО насКонтакты</li>
+                                    <li>Наши клиенты</li>
+                                    <li>О нас</li>
+                                    <li>Контакты</li>
                                 </ul>
                             </div>
                         </div>

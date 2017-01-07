@@ -120,46 +120,6 @@
             });
 
             // Open cart
-             function MapsOp() {
-                 map = new OpenLayers.Map("OSMap");
-                 map.addLayer(new OpenLayers.Layer.OSM());
-
-                 var lonLat = new OpenLayers.LonLat( 71.41675, 51.19170 )
-                     .transform(
-                         new OpenLayers.Projection("EPSG:4326"), // переобразование в WGS 1984
-                         new OpenLayers.Projection("EPSG:900913")
-                     );
-
-                 var zoom=18;
-
-                 var markers = new OpenLayers.Layer.Markers( "Markers" );
-                 map.addLayer(markers);
-                 var size = new OpenLayers.Size(30, 45);//размер картинки для маркера
-                 var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h); //смещение картинки для маркера
-                 var icon = new OpenLayers.Icon('/img/logo.png', size, offset);
-                 markers.addMarker(new OpenLayers.Marker({lat:6655270,lon:7950068}, icon));
-
-                 markers.events.register('click', map, function (e) {
-                     console.log("sad")
-                     // Open modal
-                     // $("#maps-img").css("display", "block").animate( {opacity: 1}, 500);
-                     popup = new OpenLayers.Popup("chicken",
-                         new OpenLayers.LonLat({lat:6655270,lon:7950068}),
-                         new OpenLayers.Size(200,200),
-                         "example popup",
-                         true);
-
-                     map.addPopup(popup);
-                 }); //добавление событие клика по карте
-
-                 map.setCenter (lonLat, zoom);
-
-                 // CLose modal
-                 $("#close-block-img").on("click", function() {
-                     $("#maps-img").hide();
-                 });
-
-             }
 
              //MapsOp();
         function maps() {
@@ -233,7 +193,63 @@
 
         }
 
-         maps();
+         // maps();
+
+             function maps2() {
+
+                 var $popap = $("#popup");
+
+                 var layer = new ol.layer.Tile({
+                     source: new ol.source.OSM()
+                 });
+
+                 var map = new ol.Map({
+                     layers: [layer],
+                     target: 'map',
+                     view: new ol.View({
+                         center: ol.proj.transform([71.41840, 51.19172], 'EPSG:4326', 'EPSG:3857'),
+                         zoom: 18
+                     }),
+                     logo: false
+                 });
+
+                 var pos = ol.proj.fromLonLat([71.41660, 51.19200]);
+
+                 // Vienna label
+                 var logoMaps = new ol.Overlay({
+                     position: pos,
+                     element: document.getElementById('logo-maps')
+                 });
+
+                 map.addOverlay(logoMaps);
+
+                 // Popup showing the position the user clicked
+                 var popup = new ol.Overlay({
+                     element: document.getElementById('popup')
+                 });
+
+                 map.addOverlay(popup);
+
+                 map.on('click', function() {
+                     if ( !($popap.hasClass("unvisible")) ) {
+                         $popap.addClass("unvisible");
+                     }
+                 });
+
+                 $("#popup-closer").on('click', function() {
+
+                     if ( !($popap.hasClass("unvisible")) ) {
+                         $popap.addClass("unvisible");
+                     }
+                 });
+
+                 $("#logo-maps").on('click', function() {
+                     ( $popap.hasClass("unvisible") ) ? $popap.removeClass("unvisible") : $popap.addClass("unvisible");
+                     popup.setPosition(ol.proj.transform([71.41607, 51.19230], 'EPSG:4326', 'EPSG:3857'));
+                 });
+             }
+
+         maps2();
 
 
             // Mulanur Scripts for form

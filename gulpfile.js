@@ -16,6 +16,7 @@ gulp.task('bundleJs', function() {
 gulp.task('bundleCss', function () {
     return gulp.src('css/*.css')
         .pipe(concatCss("css/bundle.css"))
+        .pipe(csso())
         .pipe(gulp.dest('dist'));
 });
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start -s -f 'js/*.js, *.html, css/*.html'"
+    "start": "browser-sync start -s -f 'js/*.js, *.html, css/*.css'"
   },
   "keywords": [],
   "author": "",
