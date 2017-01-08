@@ -122,80 +122,8 @@
             // Open cart
 
              //MapsOp();
-        function maps() {
-            var map = new ol.Map({
-                target: 'map',
-                renderer: 'canvas',
-                layers: [
-                    new ol.layer.Tile({source: new ol.source.OSM()})
-                ],
-                view: new ol.View({
-                    //projection: 'EPSG:900913',
-                    center: ol.proj.transform([71.41840, 51.19172], 'EPSG:4326', 'EPSG:3857'),
-                    zoom: 18
-                })
 
-            });
-
-            var iconStyle = [
-                new ol.style.Style({
-                    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: '/img/logo-mini.png'
-                    }))
-                })
-            ];
-
-            function createMarker(location, style){
-                var iconFeature = new ol.Feature({
-                    geometry: new ol.geom.Point(location)
-                });
-                iconFeature.setStyle(style);
-
-                return iconFeature
-            }
-            var mapVectorSource = new ol.source.Vector({
-                features: []
-            });
-            var mapVectorLayer = new ol.layer.Vector({
-                source: mapVectorSource
-            });
-            map.addLayer(mapVectorLayer);
-
-            function makeMovable(feature) {
-                var modify = new ol.interaction.Modify({
-                    features: new ol.Collection([feature])
-                });
-
-                feature.on('change',function() {
-                    console.log('Feature Moved To:' + this.getGeometry().getCoordinates());
-                }, feature);
-                return modify;
-            }
-
-            var marker = createMarker(ol.proj.transform([71.41655, 51.19170], 'EPSG:4326', 'EPSG:3857'), iconStyle);
-            mapVectorSource.addFeature(marker);
-            var modifyInteraction = makeMovable(marker);
-            map.addInteraction(modifyInteraction);
-
-            map.on('click', function() {
-                $(".ol-popup-custom").show();
-                $("#close-popup").show();
-            });
-
-            $(".ol-popup-custom-closer, #close-popup").on('click', function() {
-                $(".ol-popup-custom").hide();
-                $("#close-popup").hide();
-            });
-
-
-        }
-
-         // maps();
-
-             function maps2() {
+             function maps() {
 
                  var $popap = $("#popup");
 
@@ -249,10 +177,37 @@
                  });
              }
 
-         maps2();
+             maps();
+
+        // Increment and Dexrement
+
+         function resizeText(multiplier) {
+             var max = 1.1,
+                 min = 0.9;
+
+             if (document.body.style.fontSize === "") {
+                 document.body.style.fontSize = "1em";
+             }
+
+             if(parseFloat(document.body.style.fontSize) === max || parseFloat(document.body.style.fontSize) === min) {
+                 document.body.style.fontSize = "1em";
+             }
+
+             if (parseFloat(document.body.style.fontSize) < max && parseFloat(document.body.style.fontSize) > min) {
+                 document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
+             }
+         }
+
+         $('#plus').on('click', function () {
+             resizeText(0.5);
+         });
+
+         $('#minus').on('click', function () {
+             resizeText(-0.5);
+         });
 
 
-            // Mulanur Scripts for form
+         // Mulanur Scripts for form
 
             var argObj = {
 

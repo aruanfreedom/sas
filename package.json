@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start -s -f 'js/*.js, *.html, css/*.css'"
+    "start": "browser-sync start --server --files './*.html, js/*.js, css/*.css'"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,8 @@
     "gulp-sass": "^3.0.0",
     "jquery": "^1.12.4",
     "susy": "^2.2.12"
+  },
+  "dependencies": {
+    "i18next": "^4.1.4"
   }
 }
