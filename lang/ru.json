@@ -1,0 +1,121 @@
+{
+
+
+	"titleUnderLogo" : "Консорциум Безопасности",
+	"menu": {
+
+		"main": "Главная",
+		"ourService": "Наши услуги",
+		"howWeWork": "Как мы работаем",
+		"ourClient": "Наши клиенты",
+		"aboutUs": "О нас",
+		"contacts": "Контакты"
+
+
+
+	},
+
+	"mainCredoFirstPart": "Безопасность, охрана, защита -",
+	"mainCredoSecondPart": "это мы",
+	"scrollDown": "Прокрутите вниз",
+
+	
+
+	"ourServiceBlock": {
+
+			"ohrana": "Охрана",
+			"Pomecheniy": "Помещений",
+
+			"oficy": "Офисы",
+			"torgoviiCentry": "Торговые Центры",
+			"sklady": "Склады",
+			"parcking": "Паркинг",
+			"stroitelnyyObjects": "Строительные объекты",
+			"zhylyeComplexs": "Жилые комплексы",
+			"socialnyeObjects": "Социальные объекты",
+			"promyshObjects": "Промышленные объекты",
+			"kotedzhnyeVillages": "Коттеджные посёлки",
+			"otherObjects": "Любой ваш объект",
+
+
+			"Events" : "Мероприятий",
+			"vystavki": "Выставки",
+			"concerts": "Концерты",
+			"sportsEvents": "Спортивные соревнования",
+			"corporation": "Корпоративные вечеринки",
+			"conferences": "Конференции",
+			"otherEvents": "Любое ваше мероприятие",
+
+			"VIPperson": "VIP - Персон",
+			"wholeRK" : "Постоянная охрана по всей территори РК",
+			"timeSecurity" : "Временная охрана",
+			"personalSecurity" : "Персональная охрана под любые ваши запросы",
+			"safety" : "Безопасности",
+			"videoCameras" : "Видео камеры",
+			"sensors" : "Датчики охранной и пожарной безопасности",
+			"sensorsRun" : "Датчики движения",
+			"GBR" : "Выезд ГБР, группа быстрого реагирования",
+
+			"order" : "Заказать"
+
+
+
+
+	},
+
+
+	"howWeWorkBlock" : {
+		"tech" : "Технологичность",
+		"operations" : "Оперативность",
+		"strong" : "Сила",
+		"You" : "Вы",
+		"otvet" : "Ответственность",
+		"prof" : "Профессионализм",
+
+
+	},
+
+
+
+	"sostavConsorcium" : "Cостав консорциума",
+
+
+
+
+
+
+
+	"upButton" : "Наверх",
+
+	"orderService" : "Заказать Услугу",
+	"YourName" : "Ваше имя",
+	"YourEmail" : "Ваш email",
+	"YourText" : "Ваш текст",
+
+	"telephone" : "Телефон",
+	"address" : "Адрес",
+	"menu" : "Меню",
+	"followUs" : "Следите за нами",
+	"copyRight" : "Все права защищены",
+
+	"RK" : "Республика Казахстан,",
+	"street" : "г. Астана, район Сарыарка, ул. Алтынемел 9 (угол ул. Гёте)",
+	"graphickWork" : "График работы:",
+	"dayOfTheWeek" : "Пн - Пт: 9:00 - 18:00",
+	"dayHoliday" : "Выходной: Сб - Вс"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
