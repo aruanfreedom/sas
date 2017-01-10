@@ -83,7 +83,7 @@ body {
 }
 
 #logo {
-    padding-top: 90px;
+    padding-top: 45px;
 
     @include susy-breakpoint($medium-width) {
         padding-top: 150px;
@@ -137,7 +137,7 @@ body {
         @include susy-breakpoint($medium-width-lg) {
             min-width: 700px;
             position: relative;
-            top: 80px;
+            top: 0;
         }
         @include susy-breakpoint($medium-width) {
             display: none;
@@ -239,6 +239,7 @@ nav {
 }
 
 #lang {
+    display: inline-block;
     margin-top: 10px;
 }
 
@@ -1163,22 +1164,23 @@ nav {
 }
 
 #plus-and-minus {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
     text-align: center;
-    height: 40px;
-    width: 20px;
+    height: 17px;
+    width: 40px;
     z-index: 10;
     a {
         background: #000000;
-        display: block;
+        float: left;
         cursor: pointer;
         border: 2px solid #fff;
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        width: 100%;
+        width: 15px;
         &:active, &:focus, &:hover {
             color: #000000;
             background: #fff200;
