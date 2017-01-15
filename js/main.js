@@ -11,22 +11,22 @@
                     for (var circleLi = circleLis.length - 1; circleLi >= 0; circleLi--) {
                         var link = circleLis[circleLi];
                         var pageNumber = link.getAttribute("data-index");
-                        
-                        link.textContent = "";
-                        
-                        if (index === +pageNumber) {
-                           link.innerHTML = "<span>" + pageNumber + "</span>";                            
-                        }                      
 
-                    }                    
+                        link.textContent = "";
+
+                        if (index === +pageNumber) {
+                           link.innerHTML = "<span>" + pageNumber + "</span>";
+                        }
+
+                    }
                 }
-            });     
+            });
 
             // Default value pagination
             var startNumber = document.querySelector(".onepage-pagination  a");
             startNumber.innerHTML = "<span>1</span>";
 
-            // Close modal 
+            // Close modal
             var modalWindow = document.querySelector(".modal");
 
             $(".play-icon").on('click', function() {
@@ -38,7 +38,7 @@
                     tic++;
                     if (tic === 10) {
                         modalWindow.style.opacity = 1;
-                    
+
                         clearInterval(time);
                     }
                 }, 50);
@@ -68,16 +68,16 @@
                         $('#clieants-block .dynamic-add-link').append("<a href='#" + linkItem + "' data-link='" + linkItem + "'></a>");
                     }
                     $("#clieants-block .dynamic-add-link a:first").addClass("active");
-                    for(var itemBlock = 0; itemBlock < clients.length; itemBlock++) {    
+                    for(var itemBlock = 0; itemBlock < clients.length; itemBlock++) {
                         if (limit === allClients ) {
-                            limit = limit - 3;     
-                            sliderPage++;                      
-                            $(clients[itemBlock]).attr("data-index-visible", sliderPage); 
+                            limit = limit - 3;
+                            sliderPage++;
+                            $(clients[itemBlock]).attr("data-index-visible", sliderPage);
                         } else {
                             $(clients[itemBlock]).attr("data-index-visible", sliderPage);
                         }
                         allClients--;
-                        
+
                     }
                     $('#clieants-block .dynamic-add-link a').on("click", function(e) {
                         var number = $(this).attr("data-link"),
@@ -87,12 +87,12 @@
                         $(this).addClass("active");
                         $("#clieants-block .item").animate({opacity: 0}, 500, function(){
                             $(this).hide();
-                        }); 
+                        });
                         for(var item = 0; item < count.length; item++){
                             if (number === $(count[item]).attr("data-index-visible")) {
                                 $(count[item]).animate({opacity: 1}, 500, function(){
                                     $(this).show();
-                                });                                  
+                                });
                             }
                         }
                         e.preventDefault();
@@ -206,6 +206,17 @@
              resizeText(-0.5);
          });
 
+        //  Kazks Language
+
+        function kzLang() {
+          if (window.location.search === "?lang=kz") {
+            $("#kazDisabled").attr("href", "css/kaz-style.css");
+            $("body").css("font-size", "0.9em");
+          }
+        }
+
+        kzLang();
+
 
          // Mulanur Scripts for form
 
@@ -256,10 +267,7 @@ function sendFormData(argObj) {
 
 
 }
-         
-     }        
+
+     }
 
 })();
-
-
-

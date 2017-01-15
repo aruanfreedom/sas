@@ -14,7 +14,7 @@ gulp.task('bundleJs', function() {
 });
 
 gulp.task('bundleCss', function () {
-    return gulp.src('css/*.css')
+    return gulp.src(['css/one-page-scroll.css', 'css/openlayer.css'])
         .pipe(concatCss("css/bundle.css"))
         .pipe(csso())
         .pipe(gulp.dest('dist'));
@@ -43,14 +43,14 @@ gulp.task('img', function() {
 
 // Css minify
 gulp.task('css', function () {
-    return gulp.src('./css/*.css')
+    return gulp.src(['./css/kaz-style.css', './css/style.css'])
         .pipe(csso())
         .pipe(gulp.dest('./dist/css'));
 });
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src('scss/*.scss')
+  return gulp.src(['./scss/style.scss', './scss/kaz-style.scss'])
       .pipe(sass({
           outputStyle: 'compressed',
           includePaths: ['node_modules/susy/sass']
@@ -58,8 +58,8 @@ gulp.task('sass', function() {
       .pipe(gulp.dest('css/'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./scss/*.scss', ['sass']);
+gulp.task('sass:w', function () {
+  gulp.watch(['./scss/style.scss', './scss/kaz-style.scss'], ['sass']);
 });
 
 gulp.task('default', ['html', 'img', 'bundleJs', 'bundleCss']);

@@ -1,0 +1,55 @@
+@import "susy";
+
+// Colors
+$white: #fff;
+$black: #000;
+$yellow: #fff300;
+$dark-yellow: #ffd700;
+$grey: #5b5b5b;
+$dark-grey: #373839;
+$black-opacity-9: rgba(0,0,0, .9);
+$block-gray: #121212;
+$input-gray: #ccc;
+
+// display width
+$medium-width: 220px 1040px;
+$medium-width-lg: 1040px 1280px;
+$large-width-lg: 1367px 1920px;
+// $small-width: 360px 960px;
+
+// Settings Sussy library
+$susy: (
+  columns: 12,
+  gutters: 1/1,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+   debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+);
+
+// Custom Grid
+$class-big: col-big !default;
+$class-sml: col-sml !default;
+$class-xsl: col-xsl !default;
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+  .#{$class-big}-#{$i} {
+      @include span($i);
+  }
+  @include susy-breakpoint($medium-width) {
+    .#{$class-sml}-#{$i} {
+        @include span($i);
+    }
+  }
+//   @include susy-breakpoint($small-width) {
+//     .#{$class-xsl}-#{$i} {
+//         @include span($i);
+//     }
+//   }
+}
