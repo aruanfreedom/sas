@@ -13,7 +13,7 @@ gulp.task('bundleJs', function() {
         .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('bundleCss', function () {
+gulp.task('bundleCss', function() {
     return gulp.src(['css/one-page-scroll.css', 'css/openlayer.css'])
         .pipe(concatCss("css/bundle.css"))
         .pipe(csso())
@@ -30,7 +30,7 @@ gulp.task('js', function() {
 // MINIFY  HTML
 gulp.task('html', function() {
     return gulp.src('*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
 });
 
@@ -42,7 +42,7 @@ gulp.task('img', function() {
 });
 
 // Css minify
-gulp.task('css', function () {
+gulp.task('css', function() {
     return gulp.src(['./css/kaz-style.css', './css/style.css'])
         .pipe(csso())
         .pipe(gulp.dest('./dist/css'));
@@ -50,16 +50,16 @@ gulp.task('css', function () {
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src(['./scss/style.scss', './scss/kaz-style.scss'])
-      .pipe(sass({
-          outputStyle: 'compressed',
-          includePaths: ['node_modules/susy/sass']
-      }).on('error', sass.logError))
-      .pipe(gulp.dest('css/'));
+    return gulp.src(['./scss/style.scss', './scss/kaz-style.scss'])
+        .pipe(sass({
+            outputStyle: 'compressed',
+            includePaths: ['node_modules/susy/sass']
+        }).on('error', sass.logError))
+        .pipe(gulp.dest('css/'));
 });
 
-gulp.task('sass:w', function () {
-  gulp.watch(['./scss/style.scss', './scss/kaz-style.scss'], ['sass']);
+gulp.task('sass:w', function() {
+    gulp.watch('./scss/body.scss', ['sass']);
 });
 
 gulp.task('default', ['html', 'img', 'bundleJs', 'bundleCss']);
