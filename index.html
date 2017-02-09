@@ -38,7 +38,6 @@
     <!-- End open graph -->
     <!--<link rel="stylesheet" href="css/fonts/SFUIDisplay/stylesheet.css">-->
     <link rel="stylesheet" href="css/one-page-scroll.css">
-    <link rel="stylesheet" href="css/openlayer.css">
     <link id='kazDisabled' rel="stylesheet" href="css/style.css">
     <title>Sas - security</title>
 </head>
@@ -46,8 +45,7 @@
 <body>
     <div class="preloader_bg"></div>
     <div class="preloader_content">
-        <img src="img/logo.svg" alt="logo sas">
-        <span>Идет загрузка...<br>Подождите...</span>
+        <img src="img/load.gif" alt="logo sas">
     </div>
     <div class="modal">
         <div id="close-block"></div>
@@ -56,7 +54,7 @@
                 <div class="vertical-center-item">
                     <div class="col-big-6 col-sml-10 center modal-dialog">
                         <div class="modal-content">
-                            <iframe src="https://www.youtube.com/embed/IxGvm6btP1A" frameborder="0" allowfullscreen></iframe>
+                            <video controls id="video-dash-1" playsinline autoplay muted loop class="w100"></video>
                         </div>
                     </div>
                 </div>
@@ -82,9 +80,10 @@
                             <a href="#3">Как мы работаем</a>
                             <a href="#4">Наши клиенты</a>
                             <a href="#5">Интервью</a>
-                            <a href="#6">О нас</a>
                             <a href="#7">Cостав консорциума</a>
-                            <a href="#8">Контакты</a>
+                            <a href="#8">Наша команда</a>
+                            <a href="#9">О нас</a>
+                            <a href="#10">Контакты</a>
                         </nav>
                     </div>
                     <div id="top-contact" class="col-big-2">
@@ -139,7 +138,7 @@
                     </ul>
                 </div>
             </div>
-            <video playsinline autoplay muted loop class="home-video-bg" src="video/sas.mp4" type="video/mp4"></video>
+            <video id="video-dash-2" playsinline autoplay muted loop class="home-video-bg" poster="//shaka-player-demo.appspot.com/assets/poster.jpg"></video>
         </section>
         <section id="services">
             <div class="vertical-center">
@@ -370,25 +369,6 @@
                 </div>
             </div>
         </section>
-        <section id="director">
-            <div class="vertical-center">
-                <div class="vertical-item">
-                    <div class="col-big-5 col-sml-5 padding-none">
-                        <img class="w100" src="img/director-photo.jpg" alt="director">
-                    </div>
-                    <div class="col-big-7 col-sml-7 director-description">
-                        <h2 class="name-block">О нас</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
-                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
-                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
-                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </section>
         <section id="consorcium">
             <div class="vertical-center">
                 <div class="vertical-item">
@@ -412,13 +392,145 @@
                 </div>
             </div>
         </section>
+        <section id="team">
+            <div class="vertical-center">
+                <div class="vertical-item">
+                    <div class="col-big-12 text-center">
+                        <h2 class="name-block">Наша команда</h2>
+                    </div>
+                    <div class="team-block col-big-9 col-sml-9 center">
+                        <!--<div>
+                            <div class="col-big-3 col-sml-3 center padding-none">
+                                <img class="w100" src="img/team/team-person7.jpg" alt="person sas">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>-->
+                        <div class="team-director">
+                            <div class="team-block-1">
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person1.jpg" alt="person sas">
+                                </div>
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des team-humen-1">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person2.jpg" alt="person sas">
+                                </div>
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des team-humen-2">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person3.jpg" alt="person sas">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="team-block-2">
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des team-humen-3">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person4.jpg" alt="person sas">
+                                </div>
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des team-humen-4">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person5.jpg" alt="person sas">
+                                </div>
+                                <div class="col-big-3 col-sml-3 team-person padding-none">
+                                    <div class="team-des team-humen-5">
+                                        <h3 class="team-name">Иван Иванович</h3>
+                                        <span class="team-position">Слесарь</span>
+                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
+                                        <span class="team-email">sas@mail.ru</span>
+                                        <span class="team-soc">
+                                            <a href="#" class="vk"></a>
+                                            <a href="#" class="inst"></a>
+                                            <a href="#" class="fb"></a>
+                                        </span>
+                                    </div>
+                                    <img class="w100" src="img/team/team-person6.jpg" alt="person sas">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </section>
+        <section id="director">
+            <div class="vertical-center">
+                <div class="vertical-item">
+                    <div id="director-img" class="col-big-6 col-sml-6 padding-none">
+
+                    </div>
+                    <div class="col-big-6 col-sml-6 director-description">
+                        <h2 class="name-block">О нас</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
+                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
+                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
+                            facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="footer">
             <div class="vertical-center">
                 <div class="maps">
-                    <div id="map" class="map"></div>
+                    <!--<div id="map" class="map"></div>
                     <span class="overlay" id="logo-maps"><img src="img/logo-mini.svg"
                                                                                                                alt="logo-maps"></span>
-                    <div id="marker" title="Marker"></div>
+                    <div id="marker" title="Marker"></div>-->
+                    <img src="img/map.jpg" class="w100" alt="maps">
                     <!-- Popup -->
                     <div id="popup" class="ol-popup unvisible">
                         <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -533,7 +645,7 @@
     <!-- Scripts start -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.onepage-scroll.min.js"></script>
-    <script src="js/openlayers.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.0.5/shaka-player.compiled.js"></script>-->
     <script src="js/main.js"></script>
     <!-- Scripts end -->
 </body>

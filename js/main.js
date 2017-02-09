@@ -127,65 +127,120 @@
             $(".main").moveTo(7);
         });
 
+        // Video start
+
+        function video() {
+            var manifestUri = '//localhost:3000/video/example.mpd';
+
+            function initApp() {
+                // Install built-in polyfills to patch browser incompatibilities.
+                shaka.polyfill.installAll();
+
+                // Check to see if the browser supports the basic APIs Shaka needs.
+                if (shaka.Player.isBrowserSupported()) {
+                    // Everything looks good!
+                    initPlayer();
+                } else {
+                    // This browser does not have the minimum set of APIs we need.
+                    console.error('Browser not supported!');
+                }
+            }
+
+            function initPlayer() {
+                // Create a Player instance.
+                var video = document.getElementById('video-dash-1');
+                var player = new shaka.Player(video);
+
+                // Attach player to the window to make it easy to access in the JS console.
+                window.player = player;
+
+                // Listen for error events.
+                player.addEventListener('error', onErrorEvent);
+
+                // Try to load a manifest.
+                // This is an asynchronous process.
+                player.load(manifestUri).then(function() {
+                    // This runs if the asynchronous load is successful.
+                    console.log('The video has now been loaded!');
+                }).catch(onError); // onError is executed if the asynchronous load fails.
+            }
+
+            function onErrorEvent(event) {
+                // Extract the shaka.util.Error object from the event.
+                onError(event.detail);
+            }
+
+            function onError(error) {
+                // Log the error.
+                console.error('Error code', error.code, 'object', error);
+            }
+
+            document.addEventListener('DOMContentLoaded', initApp);
+        }
+
+        // video();
+
+        // Video end
+
         // Open cart
 
         //MapsOp();
 
-        function maps() {
+        // function maps() {
 
-            var $popap = $("#popup");
+        //     var $popap = $("#popup");
 
-            var layer = new ol.layer.Tile({
-                source: new ol.source.OSM()
-            });
+        //     var layer = new ol.layer.Tile({
+        //         source: new ol.source.OSM()
+        //     });
 
-            var map = new ol.Map({
-                layers: [layer],
-                target: 'map',
-                view: new ol.View({
-                    center: ol.proj.transform([71.41840, 51.19172], 'EPSG:4326', 'EPSG:3857'),
-                    zoom: 18
-                }),
-                logo: false
-            });
+        //     var map = new ol.Map({
+        //         layers: [layer],
+        //         target: 'map',
+        //         view: new ol.View({
+        //             center: ol.proj.transform([71.41840, 51.19172], 'EPSG:4326', 'EPSG:3857'),
+        //             zoom: 18
+        //         }),
+        //         logo: false
+        //     });
 
-            var pos = ol.proj.fromLonLat([71.41660, 51.19200]);
+        //     var pos = ol.proj.fromLonLat([71.41660, 51.19200]);
 
-            // Vienna label
-            var logoMaps = new ol.Overlay({
-                position: pos,
-                element: document.getElementById('logo-maps')
-            });
+        //     // Vienna label
+        //     var logoMaps = new ol.Overlay({
+        //         position: pos,
+        //         element: document.getElementById('logo-maps')
+        //     });
 
-            map.addOverlay(logoMaps);
+        //     map.addOverlay(logoMaps);
 
-            // Popup showing the position the user clicked
-            var popup = new ol.Overlay({
-                element: document.getElementById('popup')
-            });
+        //     // Popup showing the position the user clicked
+        //     var popup = new ol.Overlay({
+        //         element: document.getElementById('popup')
+        //     });
 
-            map.addOverlay(popup);
+        //     map.addOverlay(popup);
 
-            map.on('click', function() {
-                if (!($popap.hasClass("unvisible"))) {
-                    $popap.addClass("unvisible");
-                }
-            });
+        //     map.on('click', function() {
+        //         if (!($popap.hasClass("unvisible"))) {
+        //             $popap.addClass("unvisible");
+        //         }
+        //     });
 
-            $("#popup-closer").on('click', function() {
+        //     $("#popup-closer").on('click', function() {
 
-                if (!($popap.hasClass("unvisible"))) {
-                    $popap.addClass("unvisible");
-                }
-            });
+        //         if (!($popap.hasClass("unvisible"))) {
+        //             $popap.addClass("unvisible");
+        //         }
+        //     });
 
-            $("#logo-maps").on('click', function() {
-                ($popap.hasClass("unvisible")) ? $popap.removeClass("unvisible"): $popap.addClass("unvisible");
-                popup.setPosition(ol.proj.transform([71.41607, 51.19230], 'EPSG:4326', 'EPSG:3857'));
-            });
-        }
+        //     $("#logo-maps").on('click', function() {
+        //         ($popap.hasClass("unvisible")) ? $popap.removeClass("unvisible"): $popap.addClass("unvisible");
+        //         popup.setPosition(ol.proj.transform([71.41607, 51.19230], 'EPSG:4326', 'EPSG:3857'));
+        //     });
+        // }
 
-        maps();
+        // maps();
 
         // Increment and Dexrement
 

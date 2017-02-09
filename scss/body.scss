@@ -722,6 +722,10 @@ nav {
     }
 }
 
+.clearfix {
+    clear: both;
+}
+
 #clieants-block {
     a {
         clear: both;
@@ -745,8 +749,12 @@ nav {
 }
 
 #director {
-    background: url("../img/director.jpg") no-repeat center center;
-    background-size: cover;
+    #director-img {
+        background: url("../img/director-photo.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 25%;
+        position: relative;
+    }
 }
 
 .director-description {
@@ -1150,11 +1158,6 @@ nav {
 //     z-index: 2;
 // }
 .section .home-video-bg {
-    opacity: 0;
-    transition: opacity 3s;
-}
-
-.section.active .home-video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1163,8 +1166,13 @@ nav {
     width: auto;
     height: auto;
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
     transform: translateX(-50%) translateY(-50%);
+    transition: opacity 3s;
+}
+
+.section.active .home-video-bg {
+    opacity: 1;
 }
 
 .preloader_bg {
@@ -1198,3 +1206,92 @@ nav {
 .padding-none {
     padding: 0;
 }
+
+#team {
+    background: $block-gray;
+    .name-block {
+        margin: 4% 0 4% 0;
+    }
+}
+
+.team-block {
+    position: relative;
+    top: 0px;
+    margin: 0 auto;
+}
+
+.team-director {
+    clear: both;
+    background: url('../img/team/team-person7.jpg') no-repeat top right;
+    background-size: 68%;
+    padding-right: 15%;
+    img {
+        margin-bottom: -4px;
+    }
+}
+
+.team-person {
+    position: relative;
+    span {
+        display: block;
+    }
+    h3 {
+        margin: 0;
+    }
+    .team-des {
+        position: absolute;
+        bottom: 28px;
+        left: 30px;
+        border-left: 2px solid #121212;
+        padding-left: 10px;
+        &.team-humen-1 {
+            bottom: 12px;
+        }
+        &.team-humen-2 {
+            bottom: 20px;
+        }
+        &.team-humen-3 {
+            bottom: 20px;
+        }
+        &.team-humen-4 {
+            bottom: 17px;
+        }
+        &.team-humen-5 {
+            bottom: 20px;
+            transform: rotate(-3deg);
+        }
+    }
+    .team-tel {
+        a {
+            color: #121212;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .team-soc {
+        a {
+            background: url("../img/icons/team-icons.png") repeat-y;
+            display: inline-block;
+            height: 15px;
+            width: 18px;
+            &.vk {
+                background: url("../img/icons/team-icons.png") repeat-y;
+                background-position: 0px 30px;
+            }
+            &.inst {
+                background: url("../img/icons/team-icons.png") repeat-y;
+                background-position: 0px 15px;
+            }
+            &.fb {
+                background: url("../img/icons/team-icons.png") repeat-y;
+                background-position: 0px 0px;
+            }
+        }
+    }
+}
+
+.team-block-1 {}
+
+.team-block-2 {}
