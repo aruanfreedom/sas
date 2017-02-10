@@ -38,7 +38,10 @@
     <!-- End open graph -->
     <!--<link rel="stylesheet" href="css/fonts/SFUIDisplay/stylesheet.css">-->
     <link rel="stylesheet" href="css/one-page-scroll.css">
+    <link rel="stylesheet" href="css/component.css">
     <link id='kazDisabled' rel="stylesheet" href="css/style.css">
+
+    <script src="js/shaka-player.compiled.js"></script>
     <title>Sas - security</title>
 </head>
 
@@ -80,7 +83,8 @@
                             <a href="#3">Как мы работаем</a>
                             <a href="#4">Наши клиенты</a>
                             <a href="#5">Интервью</a>
-                            <a href="#7">Cостав консорциума</a>
+                            <a href="#6">Благодарность</a>
+                            <a href="#7">Cостав консорциума</a><br />
                             <a href="#8">Наша команда</a>
                             <a href="#9">О нас</a>
                             <a href="#10">Контакты</a>
@@ -138,7 +142,7 @@
                     </ul>
                 </div>
             </div>
-            <video id="video-dash-2" playsinline autoplay muted loop class="home-video-bg" poster="//shaka-player-demo.appspot.com/assets/poster.jpg"></video>
+            <video id="video-dash-2" autoplay muted loop class="home-video-bg"></video>
         </section>
         <section id="services">
             <div class="vertical-center">
@@ -369,6 +373,42 @@
                 </div>
             </div>
         </section>
+        <section id="slider">
+            <main>
+                <div class="page-view">
+                    <div class="project">
+                        <div class="text">
+                            <h1>Architecture</h1>
+                            <p>Photo by Steve Richey</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="text">
+                            <h1>SKYLINE</h1>
+                            <p>Photo by James Traf</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="text">
+                            <h1>Shadows</h1>
+                            <p>Photo by Samuel Zeller</p>
+                        </div>
+                    </div>
+                    <nav class="arrows">
+                        <div class="arrow previous">
+                            <svg viewBox="208.3 352 4.2 6.4">
+							<polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"/>
+						</svg>
+                        </div>
+                        <div class="arrow next">
+                            <svg viewBox="208.3 352 4.2 6.4">
+							<polygon class="st0" points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"/>
+						</svg>
+                        </div>
+                    </nav>
+                </div>
+            </main>
+        </section>
         <section id="consorcium">
             <div class="vertical-center">
                 <div class="vertical-item">
@@ -399,53 +439,47 @@
                         <h2 class="name-block">Наша команда</h2>
                     </div>
                     <div class="team-block col-big-9 col-sml-9 center">
-                        <!--<div>
-                            <div class="col-big-3 col-sml-3 center padding-none">
-                                <img class="w100" src="img/team/team-person7.jpg" alt="person sas">
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>-->
                         <div class="team-director">
                             <div class="team-block-1">
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Кусаннов Т.А.</h3>
+                                        <span class="team-position">Первый заместитель генерального директора</span>
+                                        <span class="team-tel"><a href="tel:+77010445353">+7 701 044 53 53</a></span>
+                                        <span class="team-email"><a href="mailto:sas-1zam@mail.ru">sas-1zam@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person1.jpg" alt="person sas">
                                 </div>
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des team-humen-1">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Шакизат И.Ш</h3>
+                                        <span class="team-position">Заместитель н/генерального директора по службе физической охраны</span>
+                                        <span class="team-tel"><a href="tel:+77010442727">+7 701 044 27 27</a></span>
+                                        <span class="team-email"><a href="mailto:sas-director@mail.ru">sas-director@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person2.jpg" alt="person sas">
                                 </div>
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des team-humen-2">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Касымканов А.А</h3>
+                                        <span class="team-position">Заместитель генерального директора по служба мобильный охраны</span>
+                                        <span class="team-tel"><a href="tel:+77010447700">+7 701 044 77 00</a></span>
+                                        <span class="team-email"><a href="mailto:sas-zam.director@mail.ru">sas-zam.director@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person3.jpg" alt="person sas">
                                 </div>
@@ -454,43 +488,43 @@
                             <div class="team-block-2">
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des team-humen-3">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Искаков К.М</h3>
+                                        <span class="team-position">Заместитель генерального директора по хозяйству</span>
+                                        <span class="team-tel"><a href="tel:+77010447700">+7 701 044 77 00</a></span>
+                                        <span class="team-email"><a href="mailto:sas-zam.director@mail.ru">sas-zam.director@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person4.jpg" alt="person sas">
                                 </div>
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des team-humen-4">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Суграрина М.Я</h3>
+                                        <span class="team-position">Начальник отдела кадров</span>
+                                        <span class="team-tel"><a href="tel:+77070443737">+7 707 044 37 37</a></span>
+                                        <span class="team-email"><a href="mailto:sas-hr@mail.ru">sas-hr@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person5.jpg" alt="person sas">
                                 </div>
                                 <div class="col-big-3 col-sml-3 team-person padding-none">
                                     <div class="team-des team-humen-5">
-                                        <h3 class="team-name">Иван Иванович</h3>
-                                        <span class="team-position">Слесарь</span>
-                                        <span class="team-tel"><a href="tel:+77072988542">+7 707 777 77 77</a></span>
-                                        <span class="team-email">sas@mail.ru</span>
-                                        <span class="team-soc">
+                                        <h3 class="team-name">Карабаев С.Е</h3>
+                                        <span class="team-position">Юрист</span>
+                                        <span class="team-tel"><a href="tel:+77010456600">+7 701 045 66 00</a></span>
+                                        <span class="team-email"><a href="mailto:sas-jurist@mail.ru">sas-jurist@mail.ru</a></span>
+                                        <!--<span class="team-soc">
                                             <a href="#" class="vk"></a>
                                             <a href="#" class="inst"></a>
                                             <a href="#" class="fb"></a>
-                                        </span>
+                                        </span>-->
                                     </div>
                                     <img class="w100" src="img/team/team-person6.jpg" alt="person sas">
                                 </div>
@@ -504,12 +538,13 @@
             </div>
         </section>
         <section id="director">
-            <div class="vertical-center">
-                <div class="vertical-item">
-                    <div id="director-img" class="col-big-6 col-sml-6 padding-none">
 
-                    </div>
-                    <div class="col-big-6 col-sml-6 director-description">
+            <div id="director-img" class="col-big-6 col-sml-6 padding-none">
+
+            </div>
+            <div class="col-big-6 col-sml-12 director-description">
+                <div class="vertical-center">
+                    <div class="vertical-item">
                         <h2 class="name-block">О нас</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt beatae iusto. Dicta, nulla! Impedit omnis, nobis incidunt. Quisquam, numquam expedita vero sint! A laudantium libero commodi id incidunt ipsa architecto
                             facilis, corporis tempore consequuntur cumque aperiam mollitia adipisci, officia inventore illum molestias iusto, ipsam harum. Quis fugit repudiandae, quaerat?</p>
@@ -521,6 +556,7 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+
         </section>
 
         <section class="footer">
@@ -530,7 +566,7 @@
                     <span class="overlay" id="logo-maps"><img src="img/logo-mini.svg"
                                                                                                                alt="logo-maps"></span>
                     <div id="marker" title="Marker"></div>-->
-                    <img src="img/map.jpg" class="w100" alt="maps">
+                    <img src="img/map.jpg" class="w100" id="skrin-map" alt="maps">
                     <!-- Popup -->
                     <div id="popup" class="ol-popup unvisible">
                         <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -645,7 +681,9 @@
     <!-- Scripts start -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.onepage-scroll.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.0.5/shaka-player.compiled.js"></script>-->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/slider.js"></script>
+
     <script src="js/main.js"></script>
     <!-- Scripts end -->
 </body>

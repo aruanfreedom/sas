@@ -130,7 +130,7 @@
         // Video start
 
         function video() {
-            var manifestUri = '//localhost:3000/video/example.mpd';
+            var manifestUri = 'http://sas.efflife.kz/video/example.mpd';
 
             function initApp() {
                 // Install built-in polyfills to patch browser incompatibilities.
@@ -178,7 +178,7 @@
             document.addEventListener('DOMContentLoaded', initApp);
         }
 
-        // video();
+        video();
 
         // Video end
 
